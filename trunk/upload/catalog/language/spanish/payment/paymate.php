@@ -8,7 +8,7 @@
 //-----------------------------------------------------------------
 
 // Text
-$_['text_title'] = 'Tarjeta de cr&eacute;dito o tarjeta de d&eacute;bito (Paymate)';
+$_['text_title'] = 'Tarjeta de cr&eacute;dito o d&eacute;bito (Paymate)';
 
 $_['text_unable'] = 'No es posible ubicar o actualizar el estado de su orden';
 $_['text_declined'] = 'El pago fue rechazado por Paymate';

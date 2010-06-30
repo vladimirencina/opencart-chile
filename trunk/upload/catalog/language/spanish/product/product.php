@@ -23,6 +23,8 @@ $_['text_note']           = '<span style="color: #FF0000;">Nota:</span> &iexcl;E
 $_['text_success']        = 'Gracias por su comentario. Ha sido enviado al administrador del sitio web para su aprobaci&oacute;n.';
 $_['text_wait']           = '&iexcl;Por favor espere!';
 $_['text_search']         = 'B&uacute;squeda';
+$_['text_tags']           = 'Etiquetas:';
+$_['text_minimum']        = '(Este producto tiene una cantidad m&iacute;nima de %s)';
 
 // Entry
 $_['entry_name']          = 'Su nombre:';

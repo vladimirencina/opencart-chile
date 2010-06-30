@@ -1,6 +1,6 @@
 <?php
 // Text
-$_['text_title']           = 'Tarjeta de cr&eacute;dito o tarjeta de d&eacute;bito (Processed securely by Perpetual Payments)';
+$_['text_title']           = 'Tarjeta de cr&eacute;dito o d&eacute;bito (Processed securely by Perpetual Payments)';
 $_['text_credit_card']     = 'Detalles de la tarjeta de cr&eacute;dito';
 $_['text_start_date']      = '(si est&aacute; disponible)';
 $_['text_issue']           = '(s&oacute;lo para tarjetas Maestro y Solo)';

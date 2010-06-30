@@ -40,6 +40,7 @@ $_['entry_firstname']       = 'Nombre:';
 $_['entry_lastname']        = 'Apellidos:';
 $_['entry_customer_group']  = 'Grupo de clientes:';
 $_['entry_email']           = 'Correo electr&oacute;nico:';
+$_['entry_ip']              = 'Direcci&oacute;n IP:';
 $_['entry_telephone']       = 'Tel&eacute;fono:';
 $_['entry_fax']             = 'Fax:';
 $_['entry_store_name']      = 'Nombre de la tienda:';
@@ -60,6 +61,8 @@ $_['entry_zone_code']       = 'C&oacute;digo de la regi&oacute;n o estado:';
 $_['entry_country']         = 'Pa&iacute;s:';
 $_['entry_status']          = 'Estado del pedido:';
 $_['entry_notify']          = 'Notificar al cliente:';
+$_['entry_append']          = 'Adjuntar comentarios:';
+$_['entry_add_product']     = 'Agregar producto(s):';
 
 // Error
 $_['error_permission']      = 'Advertencia: &iexcl;No tienes permiso para modificar los pedidos!';

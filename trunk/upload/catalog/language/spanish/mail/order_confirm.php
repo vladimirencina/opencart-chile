@@ -20,7 +20,7 @@ $_['text_total']            = 'Totales:';
 $_['text_download']         = 'Una vez que su pago haya sido confirmado puede hacer clic en el enlace de aqui abajo para acceder a sus productos descargables:';
 $_['text_comment']          = 'Los comentarios para su pedido son:';
 $_['text_footer']           = 'Por favor responda a este mensaje si tiene alguna duda.';
-$_['text_powered_by']       = 'potenciado por';
+$_['text_powered_by']       = 'impulsado por';
 
 // Column
 $_['column_product']        = 'Producto';

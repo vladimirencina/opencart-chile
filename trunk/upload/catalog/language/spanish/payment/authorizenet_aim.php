@@ -1,6 +1,6 @@
 <?php
 // Text
-$_['text_title']           = 'Tarjeta de cr&eacute;dito o tarjeta de d&eacute;bito (Authorize.Net)';
+$_['text_title']           = 'Tarjeta de cr&eacute;dito o d&eacute;bito (Authorize.Net)';
 $_['text_credit_card']     = 'Detalles de la tarjeta de cr&eacute;dito';
 $_['text_wait']            = '&excl;Por favor espere!';
 
