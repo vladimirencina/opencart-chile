@@ -1,4 +1,4 @@
 <?php
 // Text
-$_['text_title'] = 'Tarjeta de cr&eacute;dito o tarjeta de d&eacute;bito (AlertPay)';
+$_['text_title'] = 'Tarjeta de cr&eacute;dito o d&eacute;bito (AlertPay)';
 ?>
