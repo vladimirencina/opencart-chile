@@ -1,10 +1,10 @@
 <?php
 // Heading
-$_['heading_title']         = 'United States Postal Service';
+$_['heading_title']         = 'Servicio Postal de Estados Unidos';
 
 // Text
-$_['text_shipping']         = 'Shipping';
-$_['text_success']          = 'Success: You have modified United States Postal Service!';
+$_['text_shipping']         = 'Env&iacute;o';
+$_['text_success']          = '&Eacute;xito: &iexcl;Has modificado el Servicio Postal de Estados Unidos!';
 $_['text_domestic_0']       = 'First-Class';
 $_['text_domestic_1']       = 'Priority Mail';
 $_['text_domestic_2']       = 'Express Mail Hold for Pickup';
@@ -40,34 +40,34 @@ $_['text_international_14'] = 'First Class Mail International Flats';
 $_['text_international_15'] = 'First Class Mail International Parcels';
 $_['text_international_16'] = 'Priority Mail Small Flat Rate Box';
 $_['text_international_21'] = 'Postcards';
-$_['text_regular']          = 'Regular';
-$_['text_large']            = 'Large';
-$_['text_oversize']         = 'Oversize';
+$_['text_regular']          = 'Mediano';
+$_['text_large']            = 'Grande';
+$_['text_oversize']         = 'Demasiado grande';
 $_['text_rectangular']      = 'Rectangular';
-$_['text_non_rectangular']  = 'Non Rectangular';
+$_['text_non_rectangular']  = 'No-rectangular';
 $_['text_variable']         = 'Variable';
 
 // Entry
-$_['entry_user_id']         = 'User ID:';
-$_['entry_password']        = 'Password:';
-$_['entry_postcode']        = 'Zip Code:';
-$_['entry_domestic']        = 'Domestic Services:';
-$_['entry_international']   = 'International Services:';
-$_['entry_size']            = 'Size:';
-$_['entry_container']       = 'Container:';
-$_['entry_machinable']      = 'Machinable:';
-$_['entry_dimension']       = 'Dimensions (L x W x H):';
-$_['entry_girth']           = 'Girth:';
-$_['entry_display_time']    = 'Display Delivery Time:<br /><span class="help">Do you want to display the shipping time? (e.g. Ships within 3 to 5 days)</span>';
-$_['entry_display_weight']  = 'Display Delivery Weight:<br /><span class="help">Do you want to display the shipping weight? (e.g. Delivery Weight : 2.7674 Kg\'s)</span>';
-$_['entry_weight_class']    = 'Weight Class:<br /><span class="help">Set to pounds.</span>';
-$_['entry_tax']             = 'Tax Class:';
-$_['entry_geo_zone']        = 'Geo Zone:';
-$_['entry_status']          = 'Status:';
-$_['entry_sort_order']      = 'Sort Order:';
+$_['entry_user_id']         = 'ID de usuario:';
+$_['entry_password']        = 'Contrase&ntilde;a:';
+$_['entry_postcode']        = 'C&oacute;digo postal:';
+$_['entry_domestic']        = 'Servicios dom&eacute;sticos:';
+$_['entry_international']   = 'Servicios internacionales:';
+$_['entry_size']            = 'Tama&ntilde;o:';
+$_['entry_container']       = 'Contenedor:';
+$_['entry_machinable']      = 'Mecanizable:';
+$_['entry_dimension']       = 'Dimensiones (Largo x Ancho x Altura):';
+$_['entry_girth']           = 'Circunferencia:';
+$_['entry_display_time']    = 'Mostrar el tiempo de entrega:<br /><span class="help">&iquest;Quieres mostrar el tiempo de entrega? (p. ej. Entrega dentro de 3 a 5 d&iacute;as)</span>';
+$_['entry_display_weight']  = 'Mostrar el peso de entrega:<br /><span class="help">&iquest;Quieres mostrar el peso de entrega? (p. ej. Peso de entrega: 2,7674 Kg)</span>';
+$_['entry_weight_class']    = 'Unidad de peso:<br /><span class="help">Establecida en libras.</span>';
+$_['entry_tax']             = 'Clase de impuesto:';
+$_['entry_geo_zone']        = 'Zona geogr&aacute;fica:';
+$_['entry_status']          = 'Estado:';
+$_['entry_sort_order']      = 'Orden:';
 
 // Error
-$_['error_permission']      = 'Warning: You do not have permission to modify United States Postal Service!';
-$_['error_user_id']         = 'User ID Required!';
-$_['error_postcode']        = 'Zip Code Required!';
+$_['error_permission']      = 'Advertencia: &iexcl;No tienes permiso para modificar el Servicio Postal de Estados Unidos!';
+$_['error_user_id']         = '&iexcl;Se requiere el ID de usuario!';
+$_['error_postcode']        = '&iexcl;Se requiere el c&oacute;digo postal!';
 ?>

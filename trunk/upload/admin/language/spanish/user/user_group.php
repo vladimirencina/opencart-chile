@@ -3,7 +3,7 @@
 $_['heading_title']     = 'Grupos de usuarios';
 
 // Text
-$_['text_success']     = '&Eacute;xito: &iexcl;No has modificado los grupos de usuarios!';
+$_['text_success']     = '&Eacute;xito: &iexcl;Has modificado los grupos de usuarios!';
 
 // Column
 $_['column_name']      = 'Nombre del grupo de usuarios';
