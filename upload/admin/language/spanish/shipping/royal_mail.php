@@ -3,7 +3,7 @@
 $_['heading_title']             = 'Royal Mail';
 
 // Text
-$_['text_shipping']             = 'Shipping';
+$_['text_shipping']             = 'Env&iacute;o';
 $_['text_success']              = 'Success: You have modified Royal Mail shipping!';
 $_['text_1st_class_standard']   = 'First Class Standard Post';
 $_['text_1st_class_recorded']   = 'First Class Recorded Post';
