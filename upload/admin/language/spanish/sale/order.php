@@ -4,6 +4,7 @@ $_['heading_title']         = 'Pedidos';
 
 // Text
 $_['text_success']          = '&Eacute;xito: &iexcl;Has modificado los pedidos!';
+$_['text_success_address']  = '&Eacute;xito: &iexcl;Has modificado la direcc&oacute;n del pedido!';
 $_['text_invoice']          = 'Recibo';
 $_['text_order_id']         = 'ID del pedido:';
 $_['text_invoice_id']       = 'N&deg; del recibo:';
@@ -31,6 +32,7 @@ $_['column_remaining']      = 'Remanente';
 $_['column_notify']         = 'Cliente notificado';
 $_['column_comment']        = 'Comentario';
 $_['column_action']         = 'Acci&oacute;n';
+$_['column_add_product']    = 'Agregar producto(s)';
 
 // Entry 
 $_['entry_order_id']        = 'ID del pedido:';
@@ -40,7 +42,6 @@ $_['entry_firstname']       = 'Nombre:';
 $_['entry_lastname']        = 'Apellidos:';
 $_['entry_customer_group']  = 'Grupo de clientes:';
 $_['entry_email']           = 'Correo electr&oacute;nico:';
-$_['entry_ip']              = 'Direcci&oacute;n IP:';
 $_['entry_telephone']       = 'Tel&eacute;fono:';
 $_['entry_fax']             = 'Fax:';
 $_['entry_store_name']      = 'Nombre de la tienda:';
@@ -60,9 +61,16 @@ $_['entry_zone']            = 'Regi&oacute;n o estado:';
 $_['entry_zone_code']       = 'C&oacute;digo de la regi&oacute;n o estado:';
 $_['entry_country']         = 'Pa&iacute;s:';
 $_['entry_status']          = 'Estado del pedido:';
-$_['entry_notify']          = 'Notificar al cliente:';
 $_['entry_append']          = 'Adjuntar comentarios:';
-$_['entry_add_product']     = 'Agregar producto(s):';
+$_['entry_notify']          = 'Notificar al cliente:';
+$_['entry_category'] 		= 'Elegir categor&iacute;a:';
+$_['entry_product']  		= 'Elegir producto:';
+$_['entry_option']   		= 'Elegir opci&oacute;n(es):';
+$_['entry_quantity']   		= 'Cantidad:';
+$_['entry_tax']   			= 'Impuesto:';
+
+// Button
+$_['button_update_address'] = 'Actualizar direcci&oacute;n';
 
 // Error
 $_['error_permission']      = 'Advertencia: &iexcl;No tienes permiso para modificar los pedidos!';

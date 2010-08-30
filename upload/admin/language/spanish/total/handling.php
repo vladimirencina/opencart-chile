@@ -9,7 +9,7 @@ $_['text_success']     = '&Eacute;xito: &iexcl;Has modificado el cargo total por
 // Entry
 $_['entry_total']      = 'Total del pedido:';
 $_['entry_fee']        = 'Cargo:';
-$_['entry_tax']        = 'Clase de impusto:';
+$_['entry_tax']        = 'Clase de impuesto:';
 $_['entry_status']     = 'Estado:';
 $_['entry_sort_order'] = 'Orden:';
 
