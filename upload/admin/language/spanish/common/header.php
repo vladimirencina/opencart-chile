@@ -53,4 +53,7 @@ $_['text_user_group']        = 'Grupos de usuarios';
 $_['text_weight_class']      = 'Unidades de peso';
 $_['text_length_class']      = 'Unidades de medida';
 $_['text_zone']              = 'Zonas';
+
+// Error
+$_['error_install']          = 'ADVERTENCIA: &iexcl;TODAV&Iacute;A EXISTE LA CARPETA INSTALL!';
 ?>

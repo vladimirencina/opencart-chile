@@ -6,10 +6,10 @@ $_['heading_title']    = 'Gestor de im&aacute;genes';
 $_['text_uploaded']    = '&Eacute;xito: &iexcl;Tu archivo ha sido subido!';
 $_['text_file_delete'] = '&iexcl;El archivo ha sido eliminado!';
 $_['text_create']      = '&Eacute;xito: &iexcl;Carpeta creada!';
-$_['text_delete']      = '&Eacute;xito: &iexcl;Tu archivo o carpeta ha sido eliminado!';
-$_['text_move']        = '&Eacute;xito: &iexcl;Tu archivo o carpeta ha sido movido!';
-$_['text_copy']        = '&Eacute;xito: &iexcl;Tu archivo o carpeta ha sido copiado!';
-$_['text_rename']      = '&Eacute;xito: &iexcl;Tu archivo o carpeta ha sido renombrado!';
+$_['text_delete']      = 'Exito: Tu archivo o carpeta ha sido eliminado!';
+$_['text_move']        = 'Exito: Tu archivo o carpeta ha sido movido!';
+$_['text_copy']        = 'Exito: Tu archivo o carpeta ha sido copiado!';
+$_['text_rename']      = 'Exito: Tu archivo o carpeta ha sido renombrado!';
 
 // Entry
 $_['entry_folder']     = 'Nueva carpeta:';
@@ -23,7 +23,7 @@ $_['error_file']       = 'Advertencia: &iexcl;Por favor selecciona un archivo!';
 $_['error_directory']  = 'Advertencia: &iexcl;Por favor selecciona una carpeta!';
 $_['error_default']    = 'Advertencia: &iexcl;No se puede alterar tu carpeta predeterminada!';
 $_['error_delete']     = 'Advertencia: &iexcl;No puedes borrar esta carpeta!';
-$_['error_filename']   = 'Advertencia: &iexcl;El nombre de archivo debe tener entre 3 y 255 caracteres!';
+$_['error_filename']   = 'Advertencia: El nombre de archivo debe tener entre 3 y 255 caracteres!';
 $_['error_missing']    = 'Advertencia: &iexcl;El archivo o la carpeta no existe!';
 $_['error_exists']     = 'Advertencia: &iexcl;Un archivo o carpeta con el mismo nombre ya existe!';
 $_['error_name']       = 'Advertencia: &iexcl;Por favor ingresa un nombre nuevo!';

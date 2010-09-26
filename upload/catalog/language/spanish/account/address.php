@@ -29,6 +29,7 @@ $_['error_firstname']   = '&excl;El nombre debe tener entre 1 y 32 caracteres!';
 $_['error_lastname']    = '&excl;Los apellidos deben tener entre 1 y 32 caracteres!';
 $_['error_address_1']   = '&excl;La direcci&oacute;n debe tener entre 3 y 128 caracteres!';
 $_['error_city']        = '&excl;La ciudad debe tener entre 3 y 128 caracteres!';
+$_['error_postcode']    = '&excl;El c&oacute;digo postal debe tener entre 2 y 10 car&aacute;cteres para este pa&iacute;s!';
 $_['error_country']     = '&excl;Por favor elija un pa&iacute;s!';
 $_['error_zone']        = '&excl;Por favor elija una regi&oacute;n o estado!';
 ?>
