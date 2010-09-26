@@ -11,4 +11,7 @@ $_['column_name']       = 'M&eacute;todo de despacho';
 $_['column_status']     = 'Estado';
 $_['column_sort_order'] = 'Orden';
 $_['column_action']     = 'Acci&oacute;n';
+
+// Error
+$_['error_permission']  = 'Advertencia: &iexcl;No tienes permiso para modificar el despacho!';
 ?>

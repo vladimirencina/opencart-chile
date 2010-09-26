@@ -30,7 +30,7 @@ $_['entry_admin_language']    = 'Idioma de administraci&oacute;n:';
 $_['entry_currency']          = 'Divisa:';
 $_['entry_currency_auto']     = 'Actualizaci&oacute;n autom&aacute;tica de las divisas:<br /><span class="help">Configura tu tienda para actualizar autom&aacute;ticamente las divisas a diario.</span>';
 $_['entry_weight_class']      = 'Unidad de peso:';
-$_['entry_lenght_class']      = 'Unidad de medida:';
+$_['entry_length_class']      = 'Unidad de medida:';
 $_['entry_tax']               = 'Mostrar precios con impuestos:';
 $_['entry_invoice']           = 'N&deg; de inicio de los recibos:<br /><span class="help">Establece el n&uacute;mero de inicio desde el que los recibos comenzar&aacute;n.</span>';
 $_['entry_invoice_prefix']    = 'Prefijo de los recibos:<br /><span class="help">Establece el prefijo de los recibos p. ej. IN/001</span>';
@@ -42,6 +42,7 @@ $_['entry_account']           = 'T&eacute;rminos de la cuenta:<br /><span class=
 $_['entry_checkout']          = 'T&eacute;rminos de compra:<br /><span class="help">Fuerza a las personas a estar de acuerdo con los t&eacute;rminos antes de que un cliente pueda realizar la compra.</span>';
 $_['entry_order_status']      = 'Estado del pedido:<br /><span class="help">Establece el estado del pedido predeterminado cuando un pedido es procesado.</span>';
 $_['entry_stock_display']     = 'Mostrar existencia en bodega:<br /><span class="help">Muestra la cantidad de existencias en la p&aacute;gina del producto.</span>';
+$_['entry_stock_warning']     = 'Mostrar la advertencia de producto agotado:<br /><span class="help">Muestra un mensaje de producto agotado en la p&aacute;gina del carro de compras si un producto se encuentra agotado pero la venta de productos agotados est&aacute; habilitada (Advertencia: siempre se muestra si la venta de productos agotados est&aacute; desactivada).</span>';
 $_['entry_stock_checkout']    = 'Compra de productos agotados:<br /><span class="help">Permite que los clientes compren productos incluso si los productos que est&aacute;n pidiendo est&aacute;n agotados.</span>';
 $_['entry_stock_status']      = 'Estado en bodega:';
 $_['entry_logo']              = 'Logo de la tienda:';
@@ -82,7 +83,7 @@ $_['button_add_store']        = 'Crear una nueva tienda';
 
 // Error
 $_['error_permission']        = 'Advertencia: &iexcl;No tienes permiso para modificar las preferencias!';
-$_['error_store']             = '&iexcl;El nombre de la tienda debe tener entre 3 y 32 caracteres!';
+$_['error_name']              = '&iexcl;El nombre de la tienda debe tener entre 3 y 32 caracteres!';
 $_['error_url']               = '&iexcl;Se requiere la URL de la tienda!';
 $_['error_title']             = '&iexcl;El t&iacute;tulo debe tener entre 3 y 32 caracteres!';
 $_['error_owner']             = '&iexcl;El due&ntilde;o de la tienda debe tener entre 3 y 64 caracteres!';

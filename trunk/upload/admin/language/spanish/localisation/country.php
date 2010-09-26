@@ -26,7 +26,8 @@ Ciudad = {city}<br />
 C&oacute;digo postal = {postcode}<br />
 Zona = {zone}<br />
 C&oacute;digo de zona = {zone_code}<br />
-Pa6iacute;s = {country}</span>';
+Pa&iacute;s = {country}</span>';
+$_['entry_postcode_required']= 'Se requiere el c&oacute;digo postal::';
 
 // Error
 $_['error_permission']       = 'Advertencia: &iexcl;No tienes permiso para modificar los pa&iacute;ses!';
