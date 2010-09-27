@@ -1,5 +1,5 @@
 <?php
 // Text
-$_['text_title']       = 'Fedex';
-$_['text_description'] = 'Fedex';
+$_['text_title']       = 'FedEx';
+$_['text_description'] = 'FedEx';
 ?>

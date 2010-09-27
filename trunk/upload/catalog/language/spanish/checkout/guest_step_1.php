@@ -31,6 +31,7 @@ $_['error_email']       	= '&iexcl;La direcci&oacute;n de correo electr&oacute;n
 $_['error_telephone']   	= '&iexcl;El tel&eacute;fono debe tener entre 3 y 32 caracteres!';
 $_['error_address_1']   	= '&iexcl;La direcci&oacute;n 1 debe tener entre 3 y 128 caracteres!';
 $_['error_city']        	= '&iexcl;La ciudad debe tener entre 3 y 128 caracteres!';
+$_['error_postcode']        = '&iexcl;El c&oacute;digo postal debe tener entre 2 y 10 car&aacute;cteres para este pa&iacute;s!';
 $_['error_country']     	= '&iexcl;Por favor seleccione un pa&iacute;s!'; 
 $_['error_zone']        	= '&iexcl;Por favor seleccione una regi&oacute;n o un estado!';
 ?>

@@ -17,6 +17,8 @@ $_['text_price_asc']    = 'Precio de menor a mayor';
 $_['text_price_desc']   = 'Precio de mayor a menor';
 $_['text_rating_asc']   = 'Nota m&aacute;s baja'; 
 $_['text_rating_desc']  = 'Nota m&aacute;s alta';
+$_['text_model_asc']    = 'Modelo A - Z';
+$_['text_model_desc']   = 'Modelo Z - A';
 
 // Entry
 $_['entry_search']      = 'B&uacute;squeda:';

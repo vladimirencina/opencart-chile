@@ -16,12 +16,20 @@ $_['text_payment_method']   = 'M&eacute;todo de pago';
 $_['text_change']           = 'Cambiar';
 $_['text_comment']          = 'Sus comentarios';
 $_['text_discount']         = 'Cup&oacute;n de descuento';
+$_['text_coupon']           = 'Ingrese su c&oacute;digo y haga clic en "Aplicar cup&oacute;n" para que su descuento sea aplicado a su pedido.';
+$_['text_success']          = '&Eacute;xito: Su cup&oacute;n de descuento ha sido aplicado!';
+
+// Entry
+$_['entry_coupon']          = 'Cup&oacute;n:';
 
 // Column
 $_['column_product']        = 'Producto';
 $_['column_model']          = 'Modelo';
 $_['column_quantity']       = 'Cantidad';
 $_['column_price']          = 'Precio';
-$_['column_total']          = 'Total';	
+$_['column_total']          = 'Total'
+
+// Error
+$_['error_coupon']          = 'Error: El cup&oacute;n no es v&aacute;lido, expir&oacute;, o alcanz&oacute; su l&iacute;mite de uso!';
 
 ?>
