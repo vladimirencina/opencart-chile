@@ -16,7 +16,7 @@ $_['entry_status']           = 'Estado del pa&iacute;s:';
 $_['entry_name']             = 'Nombre del pa&iacute;s:';
 $_['entry_iso_code_2']       = 'C&oacute;digo ISO (2):';
 $_['entry_iso_code_3']       = 'C&oacute;digo ISO (3):';
-$_['entry_address_format']   = 'Formato de direcci&oacute;n:';
+$_['entry_address_format']   = 'Formato de direcci&oacute;n:<br /><span class="help">
 Nombre = {firstname}<br />
 Apellidos = {lastname}<br />
 Empresa = {company}<br />

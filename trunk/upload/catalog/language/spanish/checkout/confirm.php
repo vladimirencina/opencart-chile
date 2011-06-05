@@ -30,6 +30,6 @@ $_['column_price']          = 'Precio';
 $_['column_total']          = 'Total'
 
 // Error
-$_['error_coupon']          = 'Error: El cup&oacute;n no es v&aacute;lido, expir&oacute;, o alcanz&oacute; su l&iacute;mite de uso!';
+$_['error_coupon']          = 'Error: &iexcl;El cup&oacute;n no es v&aacute;lido, expir&oacute;, o alcanz&oacute; su l&iacute;mite de uso!';
 
 ?>
