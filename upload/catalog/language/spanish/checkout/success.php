@@ -3,11 +3,9 @@
 $_['heading_title'] = '&iexcl;Su pedido ha sido procesado!';
 
 // Text
-$_['text_message']  = '<p>&iexcl;Su pedido ha sido exitosamente procesado! Sus productos llegar&aacute;n a su destino entre 2 a 5 d&iacute;as h&aacute;biles.</p><p>Puede ver su historial de pedidos yendo a <a href="%s">Mi cuenta</a> y haciendo clic en <a href="%s">Historial</a>.</p><p>Por favor haga llegar cualquier consulta que tenga al <a href="%s">due&ntilde;o de la tienda</a>.</p><p>&iexcl;Gracias por comprar en l&iacute;nea con nosotros!</p>';
+$_['text_customer']  = '<p>&iexcl;Su pedido ha sido procesado exitosamente!</p><p>Puede ver el historial de su pedido yendo a la p&aacute;gina de <a href="%s">mi cuenta</a> y haciendo clic en <a href="%s">historial</a>. </p>Si su compra tiene una descarga asociada, puede ir a la p&aacute;gina de <a href="%s">descargas</a> de la cuenta para verlas.</p><p>Por favor dirija toda pregunta al <a href="%s">due&ntilde;o de la tienda</a>.</p><p>&iexcl;Gracias por comprar con nosotros en l&iacute;nea!</p>';
+$_['text_guest']    = '<p>&iexcl;Su pedido ha sido procesado exitosamente!</p><p>Por favor dirija toda pregunta al <a href="%s">due&ntilde;o de la tienda</a>.</p><p>&iexcl;Gracias por comprar con nosotros en l&iacute;nea!</p>';
 $_['text_basket']   = 'Carro';
-$_['text_shipping'] = 'Despacho';
-$_['text_payment']  = 'Pago';
-$_['text_guest']    = 'Compra como invitado';
-$_['text_confirm']  = 'Confirmaci&oacute;n';
+$_['text_checkout'] = 'Comprar';
 $_['text_success']  = '&Eacute;xito';
 ?>
