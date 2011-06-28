@@ -1,20 +1,14 @@
 <?php
 // Text
-$_['text_home']     = 'Portada';
-$_['text_special']  = 'Ofertas especiales';
-$_['text_contact']  = 'Contacto';
-$_['text_sitemap']  = 'Mapa del sitio';
-$_['text_account']  = 'Cuenta';
-$_['text_bookmark'] = 'Marcar esta p&aacute;gina';
-$_['text_login']    = 'Iniciar sesi&oacute;n';
-$_['text_logout']   = 'Cerrar sesi&oacute;n';
+$_['text_home']     = 'Inicio';
+$_['text_wishlist'] = 'Lista de deseos (%s)';
 $_['text_cart']     = 'Carro';
+$_['text_items']    = '%s &iacute;tem(s) - %s';
+$_['text_search']   = 'B&uacute;squeda';
+$_['text_welcome']  = 'Bienvenido(a). Puede <a href="%s">iniciar sesi&oacute;n</a> o <a href="%s">registrarse</a>.';
+$_['text_logged']   = 'Ud. inici&oacute; sesi&oacute;n como <a href="%s">%s</a> <b>(</b> <a href="%s">Cerrar sesi&oacute;n</a> <b>)</b>';
+$_['text_account']  = 'Mi cuenta';
 $_['text_checkout'] = 'Comprar';
-
-$_['text_keyword']  = 'Palabras clave';
-$_['text_advanced'] = 'B&uacute;squeda avanzada';
-$_['text_category'] = 'Todas las categor&iacute;as';
-
-// Entry
-$_['entry_search']   = 'Buscar:';
+$_['text_language'] = 'Idioma';
+$_['text_currency'] = 'Moneda';
 ?>

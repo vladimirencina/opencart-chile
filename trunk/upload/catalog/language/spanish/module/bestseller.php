@@ -1,7 +1,7 @@
 <?php
 // Heading 
-$_['heading_title']  = 'Los m&aacute;s vendidos';
+$_['heading_title'] = 'Lo m&aacute;s vendido';
 
 // Text
-$_['text_stars']     = '&iexcl;%s de 5 estrellas!';
+$_['text_reviews']  = 'Basado en %s comentarios.'; 
 ?>

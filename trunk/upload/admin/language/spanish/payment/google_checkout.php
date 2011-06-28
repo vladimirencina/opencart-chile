@@ -3,7 +3,7 @@
 $_['heading_title']      = 'Google Checkout';
 
 // Text
-$_['text_payment']       = 'Payment';
+$_['text_payment']       = 'Pago';
 $_['text_success']       = 'Success: You have modified Google Checkout!';
 
 // Entry
