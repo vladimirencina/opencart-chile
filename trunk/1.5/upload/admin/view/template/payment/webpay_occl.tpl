@@ -17,31 +17,11 @@
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <table class="form">
           <tr>
-            <td><span class="required">*</span> <?php echo $entry_cgi_path; ?></td>
-            <td><input type="text" name="webpay_occl_cgi_path" value="<?php echo $webpay_occl_cgi_path; ?>" />
-              <?php if ($error_cgi_path) { ?>
-              <span class="error"><?php echo $error_cgi_path; ?></span>
+            <td><span class="required">*</span> <?php echo $entry_kcc_path; ?></td>
+            <td><input type="text" name="webpay_occl_kcc_path" value="<?php echo $webpay_occl_kcc_path; ?>" />
+              <?php if ($error_kcc_path) { ?>
+              <span class="error"><?php echo $error_kcc_path; ?></span>
               <?php } ?></td>
-          </tr>
-          <tr>
-            <td><?php echo $entry_test; ?></td>
-            <td><select name="webpay_occl_test">
-                <?php if ($webpay_occl_test == '0') { ?>
-                <option value="0" selected="selected"><?php echo $text_off; ?></option>
-                <?php } else { ?>
-                <option value="0"><?php echo $text_off; ?></option>
-                <?php } ?>
-                <?php if ($webpay_occl_test == '100') { ?>
-                <option value="100" selected="selected"><?php echo $text_successful; ?></option>
-                <?php } else { ?>
-                <option value="100"><?php echo $text_successful; ?></option>
-                <?php } ?>
-                <?php if ($webpay_occl_test == '101') { ?>
-                <option value="101" selected="selected"><?php echo $text_declined; ?></option>
-                <?php } else { ?>
-                <option value="101"><?php echo $text_declined; ?></option>
-                <?php } ?>
-              </select></td>
           </tr>
           <tr>
             <td><?php echo $entry_total; ?></td>
