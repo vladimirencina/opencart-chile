@@ -22,16 +22,11 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		$this->data['text_enabled'] = $this->language->get('text_enabled');
 		$this->data['text_disabled'] = $this->language->get('text_disabled');
 		$this->data['text_all_zones'] = $this->language->get('text_all_zones');
-		$this->data['text_yes'] = $this->language->get('text_yes');
-		$this->data['text_no'] = $this->language->get('text_no');
 		$this->data['text_successful'] = $this->language->get('text_successful');
 		$this->data['text_declined'] = $this->language->get('text_declined');
 		$this->data['text_off'] = $this->language->get('text_off');
-		
-		$this->data['entry_merchant'] = $this->language->get('entry_merchant');
-		$this->data['entry_password'] = $this->language->get('entry_password');
-		$this->data['entry_cgi_path'] = $this->language->get('entry_cgi_path');
-		$this->data['entry_test'] = $this->language->get('entry_test');
+
+		$this->data['entry_kcc_path'] = $this->language->get('entry_kcc_path');
 		$this->data['entry_total'] = $this->language->get('entry_total');	
 		$this->data['entry_order_status'] = $this->language->get('entry_order_status');		
 		$this->data['entry_geo_zone'] = $this->language->get('entry_geo_zone');
@@ -47,10 +42,10 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$this->data['error_warning'] = '';
 		}
 
- 		if (isset($this->error['cgi_path'])) {
-			$this->data['error_cgi_path'] = $this->error['cgi_path'];
+ 		if (isset($this->error['kcc_path'])) {
+			$this->data['error_kcc_path'] = $this->error['kcc_path'];
 		} else {
-			$this->data['error_cgi_path'] = '';
+			$this->data['error_kcc_path'] = '';
 		}
 
   		$this->data['breadcrumbs'] = array();
@@ -77,13 +72,13 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		
 		$this->data['cancel'] = $this->url->link('extension/payment', 'token=' . $this->session->data['token'], 'SSL');
 
-		if (isset($this->request->post['webpay_occl_cgi_path'])) {
-			$this->data['webpay_occl_cgi_path'] = $this->request->post['webpay_occl_cgi_path'];
+		if (isset($this->request->post['webpay_occl_kcc_path'])) {
+			$this->data['webpay_occl_kcc_path'] = $this->request->post['webpay_occl_kcc_path'];
+		} elseif($this->config->get('webpay_occl_kcc_path') != '') {
+			$this->data['webpay_occl_kcc_path'] = $this->config->get('webpay_occl_kcc_path');
 		} else {
-			$this->data['webpay_occl_cgi_path'] = $this->config->get('webpay_occl_cgi_path');
+			$this->data['webpay_occl_kcc_path'] = HTTP_CATALOG . 'cgi-bin';
 		}
-		// ¡¡Unir lo de arriba y abajo!!
-		$this->data['cgi_path'] = HTTP_CATALOG . 'cgi-bin';
 
 		if (isset($this->request->post['webpay_occl_test'])) {
 			$this->data['webpay_occl_test'] = $this->request->post['webpay_occl_test'];
@@ -143,8 +138,8 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
-		if (!$this->request->post['cgi_path']) {
-			$this->error['cgi_path'] = $this->language->get('error_cgi_path');
+		if (!$this->request->post['webpay_occl_kcc_path']) {
+			$this->error['kcc_path'] = $this->language->get('error_kcc_path');
 		}
 
 		if (!$this->error) {

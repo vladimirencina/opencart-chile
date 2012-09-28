@@ -1,10 +1,10 @@
 <?php
 // Heading
-$_['heading_title']      = 'Webpay';
+$_['heading_title']      = 'Webpay Plus';
 
 // Text 
 $_['text_payment']       = 'Pago';
-$_['text_success']       = '&Eacute;xito: &iexcl;Has modificado los detalles de la cuenta de Webpay!';
+$_['text_success']       = '&Eacute;xito: &iexcl;Has modificado los detalles de la cuenta de Webpay Plus!';
 $_['text_successful']    = 'Activo - Exitoso siempre';
 $_['text_declined']      = 'Activo - Declinar siempre';
 $_['text_off']           = 'Inactivo';
@@ -20,7 +20,7 @@ $_['entry_status']       = 'Estado:';
 $_['entry_sort_order']   = 'Orden:';
 
 // Error
-$_['error_permission']   = 'Advertencia: &iexcl;No tienes permiso para modificar el pago Webpay!';
+$_['error_permission']   = 'Advertencia: &iexcl;No tienes permiso para modificar el pago Webpay Plus!';
 $_['error_merchant']     = '&iexcl;Se requiere el ID de comerciante!';
 $_['error_password']     = '&iexcl;Se requiere la contrase&ntilde;a!';
 ?>
