@@ -1,12 +1,12 @@
 <?php
 // Heading
-$_['heading_title']     = 'Gracias por comprar con %s .... ';
+$_['heading_title']     = 'Thank you for shopping with %s .... ';
 
 // Text
-$_['text_title']        = 'Tarjeta de cr&eacute;dito o d&eacute;bito (Webpay Plus)';
-$_['text_response']     = 'Respuesta desde Webpay Plus:';
-$_['text_success']      = '... su pago fue recibido exitosamente.';
-$_['text_success_wait'] = '<b><span style="color: #FF0000">Por favor espere...</span></b> mientras finalizamos su orden.<br>Si Ud. no es autom&aacute;ticamente redirigido en 10 segundos, por favor haga clic <a href="%s">aqu&iacute;</a>.';
-$_['text_failure']      = '... &iexcl; su pago fue cancelado!';
-$_['text_failure_wait'] = '<b><span style="color: #FF0000">Por favor espere...</span></b><br>Si Ud. no es autom&aacute;ticamente redirigido en 10 segundos, por favor haga clic <a href="%s">aqu&iacute;</a>.';										  
+$_['text_title']        = 'Credit Card / Debit Card (Webpay Plus)';
+$_['text_response']     = 'Response from Webpay Plus:';
+$_['text_success']      = '... your payment was successfully received.';
+$_['text_success_wait'] = '<b><span style="color: #FF0000">Please wait...</span></b> whilst we finish processing your order.<br>If you are not automatically re-directed in 10 seconds, please click <a href="%s">here</a>.';
+$_['text_failure']      = '... Your payment has been cancelled!';
+$_['text_failure_wait'] = '<b><span style="color: #FF0000">Please wait...</span></b><br>If you are not automatically re-directed in 10 seconds, please click <a href="%s">here</a>.';										  
 ?>

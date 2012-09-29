@@ -80,12 +80,6 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$this->data['webpay_occl_kcc_path'] = HTTP_CATALOG . 'cgi-bin';
 		}
 
-		if (isset($this->request->post['webpay_occl_test'])) {
-			$this->data['webpay_occl_test'] = $this->request->post['webpay_occl_test'];
-		} else {
-			$this->data['webpay_occl_test'] = $this->config->get('webpay_occl_test');
-		}
-		
 		if (isset($this->request->post['webpay_occl_total'])) {
 			$this->data['webpay_occl_total'] = $this->request->post['webpay_occl_total'];
 		} else {
