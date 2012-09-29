@@ -9,7 +9,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 		$this->load->library('encryption');
 
-		$this->data['action'] = $this->config->get('occl_webpay_action');
+		$this->data['action'] = $this->config->get('webpay_occl_kcc_path').'/tbk_bp_pago.cgi';
 
 		$this->data['tbk_tipo_transaccion'] = 0;
 		$this->data['tbk_monto'] = $order_info['total'];
