@@ -11,12 +11,13 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 		$this->data['action'] = $this->config->get('webpay_occl_kcc_path').'/tbk_bp_pago.cgi';
 
-		$this->data['tbk_tipo_transaccion'] = 0;
-		$this->data['tbk_monto'] = $order_info['total'];
+		$this->data['tbk_tipo_transaccion'] = 'TR_NORMAL';
+		$this->data['tbk_monto'] = str_replace('.', '', $order_info['total']);
 		$this->data['tbk_orden_compra'] = $order_info['order_id'];
 		$this->data['tbk_id_sesion'] = 0;
-		$this->data['tbk_url_fracaso'] = 0;
-		$this->data['tbk_url_exito'] = 0;
+//		$this->data['tbk_url_fracaso'] = $this->url->link('checkout/checkout', '', 'SSL'));
+		$this->data['tbk_url_fracaso'] = $this->url->link('checkout/cart');
+		$this->data['tbk_url_exito'] = $this->url->link('checkout/success');
 		$this->data['tbk_monto_cuota'] = 0;
 		$this->data['tbk_numero_cuota'] = 0;
 
