@@ -26,7 +26,9 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		$this->data['text_declined'] = $this->language->get('text_declined');
 		$this->data['text_off'] = $this->language->get('text_off');
 
+		$this->data['entry_kcc_url'] = $this->language->get('entry_kcc_url');
 		$this->data['entry_kcc_path'] = $this->language->get('entry_kcc_path');
+		$this->data['entry_callback'] = $this->language->get('entry_callback');
 		$this->data['entry_total'] = $this->language->get('entry_total');	
 		$this->data['entry_order_status'] = $this->language->get('entry_order_status');		
 		$this->data['entry_geo_zone'] = $this->language->get('entry_geo_zone');
@@ -40,6 +42,12 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$this->data['error_warning'] = $this->error['warning'];
 		} else {
 			$this->data['error_warning'] = '';
+		}
+
+ 		if (isset($this->error['kcc_url'])) {
+			$this->data['error_kcc_url'] = $this->error['kcc_url'];
+		} else {
+			$this->data['error_kcc_url'] = '';
 		}
 
  		if (isset($this->error['kcc_path'])) {
@@ -72,13 +80,23 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		
 		$this->data['cancel'] = $this->url->link('extension/payment', 'token=' . $this->session->data['token'], 'SSL');
 
+		if (isset($this->request->post['webpay_occl_kcc_url'])) {
+			$this->data['webpay_occl_kcc_url'] = $this->request->post['webpay_occl_kcc_url'];
+		} elseif($this->config->get('webpay_occl_kcc_url') != '') {
+			$this->data['webpay_occl_kcc_url'] = $this->config->get('webpay_occl_kcc_url');
+		} else {
+			$this->data['webpay_occl_kcc_url'] = HTTP_CATALOG . 'cgi-bin/';
+		}
+
 		if (isset($this->request->post['webpay_occl_kcc_path'])) {
 			$this->data['webpay_occl_kcc_path'] = $this->request->post['webpay_occl_kcc_path'];
 		} elseif($this->config->get('webpay_occl_kcc_path') != '') {
 			$this->data['webpay_occl_kcc_path'] = $this->config->get('webpay_occl_kcc_path');
 		} else {
-			$this->data['webpay_occl_kcc_path'] = HTTP_CATALOG . 'cgi-bin';
+			$this->data['webpay_occl_kcc_path'] = DIR_CATALOG . 'cgi-bin/';
 		}
+
+		$this->data['callback'] = HTTP_CATALOG . 'index.php?route=payment/webpay_occl/callback';
 
 		if (isset($this->request->post['webpay_occl_total'])) {
 			$this->data['webpay_occl_total'] = $this->request->post['webpay_occl_total'];
@@ -130,6 +148,10 @@ class ControllerPaymentWebpayOCCL extends Controller {
 	private function validate() {
 		if (!$this->user->hasPermission('modify', 'payment/webpay_occl')) {
 			$this->error['warning'] = $this->language->get('error_permission');
+		}
+
+		if (!$this->request->post['webpay_occl_kcc_url']) {
+			$this->error['kcc_url'] = $this->language->get('error_kcc_url');
 		}
 
 		if (!$this->request->post['webpay_occl_kcc_path']) {

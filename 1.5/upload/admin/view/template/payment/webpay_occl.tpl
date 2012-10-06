@@ -17,11 +17,22 @@
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <table class="form">
           <tr>
+            <td><span class="required">*</span> <?php echo $entry_kcc_url; ?></td>
+            <td><input type="text" name="webpay_occl_kcc_url" value="<?php echo $webpay_occl_kcc_url; ?>" />
+              <?php if ($error_kcc_url) { ?>
+              <span class="error"><?php echo $error_kcc_url; ?></span>
+              <?php } ?></td>
+          </tr>
+          <tr>
             <td><span class="required">*</span> <?php echo $entry_kcc_path; ?></td>
             <td><input type="text" name="webpay_occl_kcc_path" value="<?php echo $webpay_occl_kcc_path; ?>" />
               <?php if ($error_kcc_path) { ?>
               <span class="error"><?php echo $error_kcc_path; ?></span>
               <?php } ?></td>
+          </tr>
+          <tr>
+            <td><?php echo $entry_callback; ?></td>
+            <td><textarea cols="40" rows="5"><?php echo $callback; ?></textarea></td>
           </tr>
           <tr>
             <td><?php echo $entry_total; ?></td>
