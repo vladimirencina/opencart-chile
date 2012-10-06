@@ -93,7 +93,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		} elseif($this->config->get('webpay_occl_kcc_path') != '') {
 			$this->data['webpay_occl_kcc_path'] = $this->config->get('webpay_occl_kcc_path');
 		} else {
-			$this->data['webpay_occl_kcc_path'] = DIR_CATALOG . 'cgi-bin/';
+			$this->data['webpay_occl_kcc_path'] = preg_replace("/\/catalog\//i", '/cgi-bin/', DIR_CATALOG, 1);
 		}
 
 		$this->data['callback'] = HTTP_CATALOG . 'index.php?route=payment/webpay_occl/callback';
