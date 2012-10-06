@@ -7,19 +7,22 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 		$order_info = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
-		$this->load->library('encryption');
-
-		$this->data['action'] = $this->config->get('webpay_occl_kcc_path').'/tbk_bp_pago.cgi';
+		$this->data['action'] = $this->config->get('webpay_occl_kcc_path') . '/tbk_bp_pago.cgi';
 
 		$this->data['tbk_tipo_transaccion'] = 'TR_NORMAL';
-		$this->data['tbk_monto'] = str_replace('.', '', $order_info['total']);
+		$tbk_monto_explode = explode('.', $order_info['total']);
+		$this->data['tbk_monto'] = $tbk_monto_explode[0] . '00';
 		$this->data['tbk_orden_compra'] = $order_info['order_id'];
-		$this->data['tbk_id_sesion'] = 0;
+		$this->data['tbk_id_sesion'] = date("Ymdhis");
 //		$this->data['tbk_url_fracaso'] = $this->url->link('checkout/checkout', '', 'SSL'));
 		$this->data['tbk_url_fracaso'] = $this->url->link('checkout/cart');
 		$this->data['tbk_url_exito'] = $this->url->link('checkout/success');
-		$this->data['tbk_monto_cuota'] = 0;
-		$this->data['tbk_numero_cuota'] = 0;
+//		$this->data['tbk_monto_cuota'] = 0;
+//		$this->data['tbk_numero_cuota'] = 0;
+
+		$tbk_file = fopen(DIR_LOGS . 'tbk' . $this->data['tbk_id_sesion'] . '.log', "w+");
+		fwrite ($tbk_file, $tbk_monto_explode[0].'00;'.$order_info['order_id']);
+		fclose($tbk_file);
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/webpay_occl.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/webpay_occl.tpl';
@@ -31,7 +34,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 	}
 
 	public function callback() {
-		$this->language->load('payment/worldpay');
+		$this->language->load('payment/webpay_occl');
 	
 		$this->data['title'] = sprintf($this->language->get('heading_title'), $this->config->get('config_name'));
 
