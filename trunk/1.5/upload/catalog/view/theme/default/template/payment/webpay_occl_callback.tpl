@@ -1,1 +1,1 @@
-<?php echo $tbk_callback; ?>
+<?php echo $tbk_answer; ?>
