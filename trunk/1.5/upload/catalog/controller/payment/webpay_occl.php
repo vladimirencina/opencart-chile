@@ -87,17 +87,59 @@ class ControllerPaymentWebpayOCCL extends Controller {
 	}
 
 	public function failure() {
-		$this->data['tbk_answer'] = 'FRACASO';
+		$this->language->load('payment/webpay_occl');
 
-		$this->template = 'default/template/payment/webpay_occl_callback.tpl';
+		$this->data['text_failure'] = 'FRACASO';
+
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/webpay_occl_failure.tpl')) {
+			$this->template = $this->config->get('config_template') . '/template/payment/webpay_occl_failure.tpl';
+		} else {
+			$this->template = 'default/template/payment/webpay_occl_failure.tpl';
+		}
 
 		$this->response->setOutput($this->render());
 	}
 
 	public function success() {
-		$this->data['tbk_answer'] = 'EXITO';
+		$this->language->load('payment/webpay_occl');
 
-		$this->template = 'default/template/payment/webpay_occl_callback.tpl';
+$fic = fopen($myPath, "r");
+$tbk_cache = fopen(DIR_CACHE . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.txt', 'r');
+$tbk_cache_string = fgets($tbk_cache);
+fclose($tbk_cache);
+
+$tbk_details = explode("&", $tbk_cache_string);
+
+$this->data['tbk_orden_compra'] = explode("=",$tbk_details[0]);
+$this->data['tbk_tipo_transaccion'] = explode("=",$tbk_details[1]);
+$this->data['tbk_respuesta'] = explode("=",$tbk_details[2]);
+$this->data['tbk_monto'] = explode("=",$tbk_details[3]);
+$this->data['tbk_codigo_autorizacion'] = explode("=",$tbk_details[4]);
+$this->data['tbk_final_numero_tarjeta'] = explode("=",$tbk_details[5]);
+$this->data['tbk_fecha_contable'] = explode("=",$tbk_details[6]);
+$this->data['tbk_fecha_transaccion'] = explode("=",$tbk_details[7]);
+$this->data['tbk_hora_transaccion'] = explode("=",$tbk_details[8]);
+$this->data['tbk_id_transaccion'] = explode("=",$tbk_details[10]);
+$this->data['tbk_tipo_pago'] = explode("=",$tbk_details[11]);
+$this->data['tbk_numero_cuotas'] = explode("=",$tbk_details[12]);
+$this->data['tbk_mac'] = explode("=",$tbk_details[13]);
+$this->data['tbk_fecha_contable'] = explode("=",$tbk_details[13]);
+
+
+
+$TBK_FECHA_CONTABLE[1] = substr($TBK_FECHA_CONTABLE[1],2,2)."-".substr($TBK_FECHA_CONTABLE[1],0,2);
+$TBK_FECHA_TRANSACCION[1]=substr($TBK_FECHA_TRANSACCION[1],2,2)."-".substr($TBK_FECHA_TRANSACCION[1],0,2);
+$TBK_HORA_TRANSACCION[1]=substr($TBK_HORA_TRANSACCION[1],0,2).":".substr($TBK_HORA_TRANSACCION[1],2,2).":".substr($TBK_HORA_TRANSACCION[1],4,2);
+
+		$this->data['text_success'] = 'EXITO';
+
+		$this->data['heading_title'] = $this->language->get('heading_title');
+
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/webpay_occl_success.tpl')) {
+			$this->template = $this->config->get('config_template') . '/template/payment/webpay_occl_success.tpl';
+		} else {
+			$this->template = 'default/template/payment/webpay_occl_success.tpl';
+		}
 
 		$this->response->setOutput($this->render());
 	}
