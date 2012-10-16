@@ -39,7 +39,8 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		$this->data['tbk_answer'] = 'RECHAZADO';
 
 		if (isset($this->request->post['TBK_ID_SESION'])) {
-			$tbk_log = fopen(DIR_LOGS . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.log', 'r');
+			$tbk_log_file = DIR_LOGS . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.log';
+			$tbk_log = fopen($tbk_log_file, 'r');
 			$tbk_log_string = fgets($tbk_log);
 			fclose($tbk_log);
 			$tbk_details = explode(';', $tbk_log_string);
@@ -51,9 +52,9 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		}
 
 		if (isset($this->request->post['TBK_ID_SESION'])) {
-			$tbk_cache = fopen(DIR_CACHE . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.txt', 'w+');
+			$tbk_cache_file = DIR_CACHE . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.txt';
+			$tbk_cache = fopen($tbk_cache_file, 'w+');
 			foreach ($this->request->post as $tbk_key => $tbk_value) {
-				// ¿Usar escapeshellcmd()?
 				fwrite($tbk_cache, "$tbk_key=$tbk_value&");
 			}
 			fclose($tbk_cache);
@@ -65,15 +66,15 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$tbk_ok = false;
 		}
 
-		if (isset($this->request->post['TBK_RESPUESTA']) && $this->request->post['TBK_RESPUESTA'] == $tbk_monto && $this->request->post['TBK_ORDEN_COMPRA'] == $tbk_orden_compra && $tbk_ok == true) {
+		if (isset($this->request->post['TBK_RESPUESTA']) && $this->request->post['TBK_MONTO'] == $tbk_monto && $this->request->post['TBK_ORDEN_COMPRA'] == $tbk_orden_compra && $tbk_ok == true) {
 			$tbk_ok = true;
 		} else {
 			$tbk_ok = false;
 		}
 
 		if ($tbk_ok == true) {
-			exec($this->data['webpay_occl_kcc_path'] . 'tbk_check_mac.cgi ' . $tbk_cache, $tbk_result, $tbk_retint);
-			
+			exec($this->config->get('webpay_occl_kcc_path') . 'tbk_check_mac.cgi ' . $tbk_cache_file, $tbk_result);
+
 			if ($tbk_result[0] == 'CORRECTO') {
 				$this->data['tbk_answer'] = 'ACEPTADO';
 			} else {
@@ -110,14 +111,13 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		$this->data['continue'] = $this->url->link('common/home');
 
 
-		if (isset($this->request->post['TBK_ID_SESION']) && $this->request->post['TBK_ORDEN_COMPRA']) {
+//		if (isset($this->request->post['TBK_ID_SESION']) && $this->request->post['TBK_ORDEN_COMPRA']) {
 			$tbk_cache = fopen(DIR_CACHE . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.txt', 'r');
 			$tbk_cache_string = fgets($tbk_cache);
 			fclose($tbk_cache);
 
-//			$tbk_cache_string = 'ACK;TBK_ORDEN_COMPRA=221353;TBK_CODIGO_COMERCIO=597027342714;TBK_TIPO_TRANSACCION=TR_NORMAL;TBK_RESPUESTA=-1;TBK_MONTO=565200;TBK_CODIGO_AUTORIZACION=000000;TBK_FINAL_NUMERO_TARJETA=7276;TBK_FECHA_CONTABLE=0520;TBK_FECHA_TRANSACCION=0520;TBK_HORA_TRANSACCION=124144;TBK_ID_SESION=238831;TBK_ID_TRANSACCION=129613424593;TBK_TIPO_PAGO=VN;TBK_NUMERO_CUOTAS=0;TBK_MAC=76d37677633e4a095669d512475ad6473e43d1039b9b599ea1583cd8ab52017e3cab3205d1b7b889b8a0fc2a0b9495764473c9d13f54e4ef54044b296ccd8534e19bf5f0332a0db3c8217f3a3c685c871590985585b14e58c45d68b6be56231b48425844c20da8f105b6e79d1db2b4ee86c68d588f0479c30e5f46e6634957347482f899ae57c3259d84c1827dd58e051dabcb8bbd6be915c40f6dbe8a7d01ae9f293e05b0db073eaa039796c540e38a0918f9e78a0633af18d9953b6ce96f4cd54f7e776bc1a79ae987fd34873c8fdb98a29d5d39d0f74eca41d73524e709414714bde16ca1f09e7f9e15ab36cbeb6347de8723593833059041558169fc71db9801f6e3732611ad275d14cdcab2837808d0757d17b21ab609d2f52d63a10dfd7d257c6f833a020918d06da38c47d5424bebff93d352c3ae4f5cd4e67afe24de932bb5485ab57e986f3e3cbe2f6b7e8ed2281f7eeed52df7ec75f65dd237e71ce1da96b7b85c1860df8f57c053f8481400a252754f3579a1c7f50b2c8d494810e1671cb7618f9ecb04e426a74c3c68dbcc0464f2434dd9f636df770a66298001205539633d746691dd12be7e61d27ddc922442e1c52377e48349e';
+			$tbk_cache_string = 'TBK_ORDEN_COMPRA=73&TBK_TIPO_TRANSACCION=TR_NORMAL&TBK_RESPUESTA=-3&TBK_MONTO=150000&TBK_CODIGO_AUTORIZACION=000000&TBK_FINAL_NUMERO_TARJETA=5678&TBK_FECHA_CONTABLE=1012&TBK_FECHA_TRANSACCION=1012&TBK_HORA_TRANSACCION=011457&TBK_ID_SESION=20121011084540&TBK_ID_TRANSACCION=13542569&TBK_TIPO_PAGO=VD&TBK_NUMERO_CUOTAS=0&TBK_VCI=TSY&TBK_MAC=759436d61f6b9f7d40bfbbbaab8e95f51dccd073b748b3436216a892533c4d6ee185852c94f4adec3235785e489d4f5c719ce902877f098fbe171f6ba147e6937d05e1fff057814cbc80c1ec822cb8e7ccb6439ecae24039ee79094d2ffe472982922ab3b122b06139ca173e4bd1843233fa3696f53ce3a796ec56e2163f007b862f502a308fe445b14072c718bef0c6e7bf7af694e3766b1376d7ba29e7b8189e102af93a1feef4257d5d4ddd8fcf651020ba3abc2dfddcfbbde748afc4751c438505094f610f78820511d8ce7b65523878103c9a68c9551d7b8da29125623cf95cc2d7ce89252526b63dc23d58c9f9dd7c000ba430cc72231edb86bf115aa195e5904414b00a4400a929b2127c73a7e8ed1b80880ffd85e3c5e2ae0f8a78d4735042fe3a2e7382e81b430d46a564f3cc5fea368752c5a7fb9dd3f8571c983e4d57b61065a238e64ea85fd2b1077f8d8e153c4c9917cb11bebd393665cd5524017eecba01a7e3542e5f3a86703c929ea19c1e22b29582dea33ac7b67f7d89afaf8b5fe0d12a1c4b9593d168a93e7fb74f972ea63bb40dc9f1e4b71ef71d1e070d9bf00e5fb481d5f519528d73005956cc7895f0a7ed00d532c7eb18cbf5c757b6281d8b4487dd4ab043f471df210489a92b17c44acde867a6f7ad5c6c1211d35db2e2078d47da7680ccd26878075dee7228756f5e0793d970ac46c780c12fdf&';
 			$tbk_details = explode('&', $tbk_cache_string);
-//			$tbk_details = explode(';', $tbk_cache_string);
 
 			$tbk_orden_compra = explode("=",$tbk_details[0]);
 			$tbk_tipo_transaccion = explode("=",$tbk_details[1]);
@@ -146,7 +146,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$this->data['tbk_tipo_pago'] = explode("=",$tbk_details[11]);
 			$this->data['tbk_numero_cuotas'] = explode("=",$tbk_details[12]);
 			$this->data['tbk_mac'] = explode("=",$tbk_details[13]);
-		}
+//		}
 
 		$this->data['text_success'] = 'EXITO';
 
