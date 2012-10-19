@@ -8,7 +8,7 @@ $_['text_success']     = '&Eacute;xito: &ieacl;Has modificado las tarifas de env
 
 // Entry
 $_['entry_cost']       = 'Costo:';
-$_['entry_tax']        = 'Clase de impuesto:';
+$_['entry_tax_class']  = 'Clase de impuesto:';
 $_['entry_geo_zone']   = 'Zona geogr&aacute;fica:';
 $_['entry_status']     = 'Estado:';
 $_['entry_sort_order'] = 'Orden:';

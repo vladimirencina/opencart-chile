@@ -7,7 +7,7 @@ $_['text_shipping']    = 'Env&iacute;o';
 $_['text_success']     = '&Eacute;xito: &iexcl;Has modificado el env&iacute;o gratis!';
 
 // Entry
-$_['entry_total']      = 'Total:<br /><span class="help">Monto m&iacute;nimo del sub-total necesario para hacer disponible el m&oacute;dulo.</span>';
+$_['entry_total']      = 'Total:<br /><span class="help">Monto m&iacute;nimo del sub-total necesario para hacer disponible el m&oacute;dulo de env&iacute;o gratis.</span>';
 $_['entry_geo_zone']   = 'Zona geogr&aacute;fica:';
 $_['entry_status']     = 'Estado:';
 $_['entry_sort_order'] = 'Orden:';

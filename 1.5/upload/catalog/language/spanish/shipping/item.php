@@ -1,5 +1,5 @@
 <?php
 // Text
-$_['text_title']       = 'Por &iacute;tem';
-$_['text_description'] = 'Tarifa de env&iacute;o por &iacute;tem';
+$_['text_title']       = 'Por Item';
+$_['text_description'] = 'Tarifa de envío por Item';
 ?>

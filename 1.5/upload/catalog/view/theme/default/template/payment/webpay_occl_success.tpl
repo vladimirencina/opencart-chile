@@ -1,36 +1,71 @@
-<?php echo $header; ?><?php echo $column_left; ?><?php echo $column_right; ?>
-<div id="content"><?php echo $content_top; ?>
-  <div class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <?php echo $breadcrumb['separator']; ?><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a>
-    <?php } ?>
-  </div>
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n"; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="<?php echo $direction; ?>" lang="<?php echo $language; ?>" xml:lang="<?php echo $language; ?>">
+<head>
+<meta http-equiv="refresh" content="5;url=<?php echo $continue; ?>">
+<title><?php echo $title; ?></title>
+<base href="<?php echo $base; ?>" />
+</head>
+<body>
+<div style="text-align: center;">
   <h1><?php echo $heading_title; ?></h1>
-  <div class="content">
-  <?php echo $text_success; ?>
-El pago se ha realizado con &eacute;xito.
-
-Datos de la Compra:
-Nro Orden: <?php echo $this->data['tbk_orden_compra']; ?>
-Monto (pesos chilenos): <?php echo ($this->data['tbk_monto'] / 100); ?>
-
-Datos de la Transacci&oacute;n:
-Respuesta Transacci&oacute;n: <?php echo $this->data['tbk_respuesta']; ?>
-Codigo Autorizaci&oacute;n: <?php echo $this->data['tbk_codigo_autorizacion']; ?>
-Fecha Contable: <?php echo $this->data['tbk_fecha_contable']; ?>
-Fecha Transacci&oacute;n: <?php echo $this->data['tbk_fecha_transaccion']; ?>
-Hora Transacci&oacute;n: <?php echo $this->data['tbk_hora_transaccion']; ?>
-Tarjeta de cr&eacute;dito: XXXXXXXXXXXX<?php echo $this->data['tbk_final_numero_tarjeta']; ?>
-Tipo Transacci&oacute;n: <?php echo $this->data['tbk_tipo_transaccion']; ?>
-Tipo Pago: <?php echo $this->data['tbk_tipo_pago']; ?>
-Numero cuotas: <?php echo $this->data['tbk_numero_cuotas']; ?>
-
-$this->data['tbk_id_transaccion'];
-$this->data['tbk_mac'];
-
-  </div>
-  <div class="buttons">
-    <div class="right"><a href="<?php echo $continue; ?>" class="button"><?php echo $button_continue; ?></a></div>
-  </div>
-  <?php echo $content_bottom; ?></div>
-<?php echo $footer; ?>
+  <p><?php echo $text_response; ?></p>
+  <hr />
+  <table style="margin-left: auto; margin-right: auto; text-align: left;">
+    <tr>
+      <th colspan="2" style="text-align: center;">Datos de la compra</th>
+    </tr>
+    <tr>
+      <td>N&uacute;mero del pedido:</td>
+      <td><?php echo $this->data['tbk_orden_compra']; ?></td>
+    </tr>
+    <tr>
+      <td>Monto (pesos chilenos):</td>
+      <td><?php echo ($this->data['tbk_monto'] / 100); ?></td>
+    </tr>
+    <tr>
+      <th colspan="2" style="text-align: center;">Datos de la transacci&oacute;n</th>
+    </tr>
+    <tr>
+      <td>Respuesta de la transacci&oacute;n:</td>
+      <td><?php echo $this->data['tbk_respuesta']; ?></td>
+    </tr>
+    <tr>
+      <td>C&oacute;digo de autorizaci&oacute;n:</td>
+      <td><?php echo $this->data['tbk_codigo_autorizacion']; ?></td>
+    </tr>
+    <tr>
+      <td>Fecha contable:</td>
+      <td><?php echo $this->data['tbk_fecha_contable']; ?></td>
+    </tr>
+    <tr>
+      <td>Fecha de la transacci&oacute;n:</td>
+      <td><?php echo $this->data['tbk_fecha_transaccion']; ?></td>
+    </tr>
+    <tr>
+      <td>Hora de la transacci&oacute;n:</td>
+      <td><?php echo $this->data['tbk_hora_transaccion']; ?></td>
+    </tr>
+    <tr>
+      <td>Tarjeta de cr&eacute;dito:</td>
+      <td><?php echo $this->data['tbk_final_numero_tarjeta']; ?></td>
+    </tr>
+    <tr>
+      <td>Tipo de transacci&oacute;n:</td>
+      <td><?php echo $this->data['tbk_tipo_transaccion']; ?></td>
+    </tr>
+    <tr>
+      <td>Tipo de pago:</td>
+      <td><?php echo $this->data['tbk_tipo_pago']; ?></td>
+    </tr>
+    <tr>
+      <td>N&uacute;mero de cuotas:</td>
+      <td><?php echo $this->data['tbk_numero_cuotas']; ?></td>
+    </tr>
+  </table>
+  <hr />
+  <p><?php echo $text_success; ?></p>
+  <p><?php echo $text_success_wait; ?></p>
+</div>
+</body>
+</html>
