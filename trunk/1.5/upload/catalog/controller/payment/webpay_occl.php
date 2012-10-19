@@ -14,10 +14,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		$this->data['tbk_monto'] = $tbk_monto_explode[0] . '00';
 		$this->data['tbk_orden_compra'] = $order_info['order_id'];
 		$this->data['tbk_id_sesion'] = date("Ymdhis");
-//		$this->data['tbk_url_fracaso'] = $this->url->link('checkout/checkout', '', 'SSL'));
-//		$this->data['tbk_url_fracaso'] = $this->url->link('checkout/cart');
 		$this->data['tbk_url_fracaso'] = $this->url->link('payment/webpay_occl/failure', '', 'SSL');
-//		$this->data['tbk_url_exito'] = $this->url->link('checkout/success');
 		$this->data['tbk_url_exito'] = $this->url->link('payment/webpay_occl/success', '', 'SSL');
 //		$this->data['tbk_monto_cuota'] = 0;
 //		$this->data['tbk_numero_cuota'] = 0;
@@ -90,7 +87,24 @@ class ControllerPaymentWebpayOCCL extends Controller {
 	public function failure() {
 		$this->language->load('payment/webpay_occl');
 
-		$this->data['text_failure'] = 'FRACASO';
+		if (!isset($this->request->server['HTTPS']) || ($this->request->server['HTTPS'] != 'on')) {
+			$this->data['base'] = $this->config->get('config_url');
+		} else {
+			$this->data['base'] = $this->config->get('config_ssl');
+		}
+	
+		$this->data['language'] = $this->language->get('code');
+		$this->data['direction'] = $this->language->get('direction');
+
+		$this->data['title'] = sprintf($this->language->get('heading_title'), $this->config->get('config_name'));
+
+		$this->data['heading_title'] = sprintf($this->language->get('heading_title'), $this->config->get('config_name'));
+
+		$this->data['text_response'] = $this->language->get('text_response');
+		$this->data['text_failure'] = $this->language->get('text_failure');
+		$this->data['text_failure_wait'] = sprintf($this->language->get('text_failure_wait'), $this->url->link('checkout/cart', '', 'SSL'));
+
+		$this->data['continue'] = $this->url->link('checkout/cart');
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/webpay_occl_failure.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/webpay_occl_failure.tpl';
@@ -104,67 +118,82 @@ class ControllerPaymentWebpayOCCL extends Controller {
 	public function success() {
 		$this->language->load('payment/webpay_occl');
 
-		$this->document->setTitle($this->language->get('heading_title'));
+		if (!isset($this->request->server['HTTPS']) || ($this->request->server['HTTPS'] != 'on')) {
+			$this->data['base'] = $this->config->get('config_url');
+		} else {
+			$this->data['base'] = $this->config->get('config_ssl');
+		}
+	
+		$this->data['language'] = $this->language->get('code');
+		$this->data['direction'] = $this->language->get('direction');
+
+		$this->data['title'] = sprintf($this->language->get('heading_title'), $this->config->get('config_name'));
+
+		$this->data['heading_title'] = sprintf($this->language->get('heading_title'), $this->config->get('config_name'));
+
+		$this->data['text_response'] = $this->language->get('text_response');
+		$this->data['text_success'] = $this->language->get('text_success');
+		$this->data['text_success_wait'] = sprintf($this->language->get('text_success_wait'), $this->url->link('checkout/success', '', 'SSL'));
 
 		$this->data['button_continue'] = $this->language->get('button_continue');
 
-		$this->data['continue'] = $this->url->link('common/home');
+		$this->data['continue'] = $this->url->link('checkout/success');
 
+		$this->data['tbk_orden_compra'] = 0;
+		$this->data['tbk_tipo_transaccion'] = 0;
+		$this->data['tbk_respuesta'] = 0;
+		$this->data['tbk_monto'] = 0;
+		$this->data['tbk_codigo_autorizacion'] = 0;
+		$this->data['tbk_final_numero_tarjeta'] = '************0000';
+		$this->data['tbk_fecha_contable'] = '00-00';
+		$this->data['tbk_fecha_transaccion'] = '00-00';
+		$this->data['tbk_hora_transaccion'] = '00:00:00';
+		$this->data['tbk_id_transaccion'] = 0;
+		$this->data['tbk_tipo_pago'] = 'XX';
+		$this->data['tbk_numero_cuotas'] = '00';
+		$this->data['tbk_mac'] = 0;
 
-//		if (isset($this->request->post['TBK_ID_SESION']) && $this->request->post['TBK_ORDEN_COMPRA']) {
+		if (isset($this->request->post['TBK_ID_SESION']) && isset($this->request->post['TBK_ORDEN_COMPRA'])) {
 			$tbk_cache = fopen(DIR_CACHE . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.txt', 'r');
 			$tbk_cache_string = fgets($tbk_cache);
 			fclose($tbk_cache);
 
 			$tbk_details = explode('&', $tbk_cache_string);
 
-			$tbk_orden_compra = explode("=",$tbk_details[0]);
-			$tbk_tipo_transaccion = explode("=",$tbk_details[1]);
-			$tbk_respuesta = explode("=",$tbk_details[2]);
-			$tbk_monto = explode("=",$tbk_details[3]);
-			$tbk_codigo_autorizacion = explode("=",$tbk_details[4]);
-			$tbk_final_numero_tarjeta = explode("=",$tbk_details[5]);
-			$tbk_fecha_contable = explode("=",$tbk_details[6]);
-			$tbk_fecha_transaccion = explode("=",$tbk_details[7]);
-			$tbk_hora_transaccion = explode("=",$tbk_details[8]);
-			$tbk_id_transaccion = explode("=",$tbk_details[10]);
-			$tbk_tipo_pago = explode("=",$tbk_details[11]);
-			$tbk_numero_cuotas = explode("=",$tbk_details[12]);
-			$tbk_mac = explode("=",$tbk_details[13]);
+			$tbk_orden_compra = explode('=', $tbk_details[0]);
+			$tbk_tipo_transaccion = explode('=', $tbk_details[1]);
+			$tbk_respuesta = explode('=', $tbk_details[2]);
+			$tbk_monto = explode('=', $tbk_details[3]);
+			$tbk_codigo_autorizacion = explode('=', $tbk_details[4]);
+			$tbk_final_numero_tarjeta = explode('=', $tbk_details[5]);
+			$tbk_fecha_contable = explode('=', $tbk_details[6]);
+			$tbk_fecha_transaccion = explode('=', $tbk_details[7]);
+			$tbk_hora_transaccion = explode('=', $tbk_details[8]);
+			$tbk_id_transaccion = explode('=', $tbk_details[10]);
+			$tbk_tipo_pago = explode('=', $tbk_details[11]);
+			$tbk_numero_cuotas = explode('=', $tbk_details[12]);
+			$tbk_mac = explode('=', $tbk_details[13]);
 
 			$this->data['tbk_orden_compra'] = $tbk_orden_compra[1];
 			$this->data['tbk_tipo_transaccion'] = $tbk_tipo_transaccion[1];
 			$this->data['tbk_respuesta'] = $tbk_respuesta[1];
 			$this->data['tbk_monto'] = $tbk_monto[1];
 			$this->data['tbk_codigo_autorizacion'] = $tbk_codigo_autorizacion[1];
-			$this->data['tbk_final_numero_tarjeta'] = $tbk_final_numero_tarjeta[1];
+			$this->data['tbk_final_numero_tarjeta'] = '************' . $tbk_final_numero_tarjeta[1];
 			$this->data['tbk_fecha_contable'] = substr($tbk_fecha_contable[1], 2, 2) . '-' . substr($tbk_fecha_contable[1], 0, 2);
 			$this->data['tbk_fecha_transaccion'] = substr($tbk_fecha_transaccion[1], 2, 2) . '-' . substr($tbk_fecha_transaccion[1], 0, 2);
 			$this->data['tbk_hora_transaccion'] = substr($tbk_hora_transaccion[1], 0, 2) . ':' . substr($tbk_hora_transaccion[1], 2, 2) . ':' . substr($tbk_hora_transaccion[1], 4, 2);
-			$this->data['tbk_id_transaccion'] = explode("=",$tbk_details[10]);
-			$this->data['tbk_tipo_pago'] = explode("=",$tbk_details[11]);
-			$this->data['tbk_numero_cuotas'] = explode("=",$tbk_details[12]);
-			$this->data['tbk_mac'] = explode("=",$tbk_details[13]);
-//		}
-
-		$this->data['text_success'] = 'EXITO';
-
-		$this->data['heading_title'] = $this->language->get('heading_title');
+			$this->data['tbk_id_transaccion'] = $tbk_id_transaccion[1];
+			$this->data['tbk_tipo_pago'] = $tbk_tipo_pago[1];
+			$this->data['tbk_numero_cuotas'] = $tbk_numero_cuotas[1];
+			$this->data['tbk_mac'] = $tbk_mac[1];
+		}
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/webpay_occl_success.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/webpay_occl_success.tpl';
 		} else {
 			$this->template = 'default/template/payment/webpay_occl_success.tpl';
 		}
-		
-		$this->children = array(
-			'common/column_left',
-			'common/column_right',
-			'common/content_top',
-			'common/content_bottom',
-			'common/footer',
-			'common/header'
-		);
 
 		$this->response->setOutput($this->render());
 	}
