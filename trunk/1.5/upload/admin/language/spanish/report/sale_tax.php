@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']     = 'Reporte del impuesto';
+$_['heading_title']     = 'Informe de impuestos';
 
 // Text
 $_['text_year']         = 'Años';

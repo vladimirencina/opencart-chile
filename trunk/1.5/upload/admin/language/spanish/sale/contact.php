@@ -20,7 +20,7 @@ $_['entry_to']             = 'Para:';
 $_['entry_customer_group'] = 'Grupo de clientes:';
 $_['entry_customer']       = 'Cliente:<br /><span class="help">Se autocompleta</span>';
 $_['entry_affiliate']      = 'Afiliado:<br /><span class="help">Se autocompleta</span>';
-$_['entry_product']        = 'Productos:<br /><span class="help">Enviar solo a clientes que han pedido los productos de la lista (se autocompleta)</span>';
+$_['entry_product']        = 'Productos:<br /><span class="help">Enviar solo a clientes que han pedido los productos de la lista (se autocompleta).</span>';
 $_['entry_subject']        = 'Asunto:';
 $_['entry_message']        = 'Mensaje:';
 

@@ -2,7 +2,7 @@
 // Text
 $_['text_approve_subject']      = '%s - su cuenta ha sido activada!';
 $_['text_approve_welcome']      = 'Bienvenido y gracias por registrarse en %s!';
-$_['text_approve_login']        = 'Ahora su cuenta ha sido creada y puede iniciar sesión usando su dirección de correo electrónico y contraseña visitando nuestro sitio web o en la siguiente URL:';
+$_['text_approve_login']        = 'Ahora su cuenta ha sido creada y puede iniciar sesión utilizando su dirección de correo electrónico y contraseña visitando nuestro sitio web o en la siguiente URL:';
 $_['text_approve_services']     = 'Una vez iniciada la sesion, podra acceder a otros servicios que incluyen revisar pedidos anteriores, imprimir recibos y editar la informacion de su cuenta.';
 $_['text_approve_thanks']       = 'Gracias,';
 $_['text_transaction_subject']  = '%s - Credito de la cuenta';

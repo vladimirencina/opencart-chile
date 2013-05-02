@@ -12,7 +12,7 @@ $_['text_column_right']   = 'Columna derecha';
 
 // Entry
 $_['entry_limit']         = 'Límite:'; 
-$_['entry_image']         = 'Imagen (Ancho x Alto)';
+$_['entry_image']         = 'Imagen (Ancho x Alto) y tipo de cambio de tamaño:';
 $_['entry_layout']        = 'Disposición:';
 $_['entry_position']      = 'Posición:';
 $_['entry_status']        = 'Estado:';

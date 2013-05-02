@@ -32,10 +32,10 @@ $_['entry_status']            = 'Estado del país:';
 // Error
 $_['error_permission']        = 'Advertencia: ¡No tienes permiso para modificar los países!';
 $_['error_name']              = '¡El nombre del país debe tener entre 3 y 128 caracteres!';
-$_['error_default']           = 'Advertencia: ¡Este país no puede ser eliminado debido a que está asignado como el país predeterminado de la tienda!';
+$_['error_default']           = 'Advertencia: ¡Este país no puede ser eliminado debido a que está asignado como el país de la tienda predeterminada!';
 $_['error_store']             = 'Advertencia: ¡Este país no puede ser eliminado porque está asignado a %s tiendas!';
 $_['error_address']           = 'Advertencia: ¡Este país no puede ser eliminado porque está asignado a %s entradas del libro de direcciones!';
 $_['error_affiliate']         = 'Advertencia: ¡Este país no puede ser eliminado porque está asignado a %s afiliados!';
 $_['error_zone']              = 'Advertencia: ¡Este país no puede ser eliminado porque está asignado a %s zonas!';
-$_['error_zone_to_geo_zone']  = 'Advertencia: ¡Este país no puede ser eliminado porque está asignado a %s zonas para zonas geográficas!';
+$_['error_zone_to_geo_zone']  = 'Advertencia: ¡Este país no puede ser eliminado porque está asignado a %s zonas a zonas geográficas!';
 ?>

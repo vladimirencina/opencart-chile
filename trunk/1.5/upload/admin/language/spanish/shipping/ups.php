@@ -3,8 +3,8 @@
 $_['heading_title']                = 'UPS';
 
 // Text
-$_['text_shipping']                = 'Env&iacute;o';
-$_['text_success']                 = '&Eacute;xito: &iexcl;Has modificado el env&iacute;o a trav&eacute;s de UPS!';
+$_['text_shipping']                = 'Envío';
+$_['text_success']                 = 'Éxito: ¡Has modificado el envío a través de UPS!';
 $_['text_regular_daily_pickup']    = 'Regular Daily Pickup';
 $_['text_daily_pickup']            = 'Daily Pickup';
 $_['text_customer_counter']        = 'Customer Counter';
@@ -54,37 +54,37 @@ $_['text_today_express_saver']     = 'UPS Today Express Saver';
 
 // Entry
 $_['entry_key']                    = 'Clave de acceso:<span class="help">Enter the XML rates access key assigned to you by UPS.</span>';
-$_['entry_username']               = 'Nombre de usuario:<span class="help">Ingresa el nombre de usuario de UPS Services.</span>';
-$_['entry_password']               = 'Contrase&ntilde;a:<span class="help">Ingresa la contrase&ntilde;a de UPS Services.</span>';
-$_['entry_pickup']                 = 'M&eacute;todo de ida a buscar:<span class="help">How do you give packages to UPS (only used when origin is US)?</span>';
-$_['entry_packaging']              = 'Tipo de embalaje:<span class="help">&iquest;Qu&eacute; tipo de embalaje utilizar?</span>';
-$_['entry_classification']         = 'C&oacute;digo de clasificaci&oacute;n del cliente:<span class="help">01 - If you are billing to a UPS account and have a daily UPS pickup, 03 - If you do not have a UPS account or you are billing to a UPS account but do not have a daily pickup, 04 - If you are shipping from a retail outlet (only used when origin is US)</span>';
-$_['entry_origin']                 = 'C&oacute;digo de origen del env&iacute;o:<span class="help">What origin point should be used (this setting affects only what UPS product names are shown to the user)</span>';
+$_['entry_username']               = 'Nombre de usuario:<span class="help">Ingresa el nombre de usuario de la cuenta de UPS Services.</span>';
+$_['entry_password']               = 'Contraseña:<span class="help">Ingresa la contraseña de UPS Services.</span>';
+$_['entry_pickup']                 = 'Método de ida a buscar:<span class="help">¿Cómo entregas los paquetes a UPS (solo se utiliza cuando el origen es EE.UU.)?</span>';
+$_['entry_packaging']              = 'Tipo de embalaje:<span class="help">¿Qué tipo de embalaje utilizas?</span>';
+$_['entry_classification']         = 'Código de clasificación del cliente:<span class="help">01 - Si estás facturando a una cuenta de UPS y tienes retiros diarios de UPS, 03 - si no tienes una cuenta de UPS o estás facturando a una cuenta de UPS pero no tienes retiros diarios, 04 - si estás enviando desde un punto de venta por menor (solo se utiliza cuando el origen es EE.UU.)</span>';
+$_['entry_origin']                 = 'Código de origen del envío:<span class="help">¿Qué punto de origen debería usarse (esta configuración solo afecta qué nombres de producto de UPS se muestran al usuario)?</span>';
 $_['entry_city']                   = 'Ciudad de origen:<span class="help">Ingresa el nombre de la ciudad de origen.</span>';
-$_['entry_state']                  = 'Estado o provincia de origen:<span class="help">Enter the two-letter code for your origin state/province.</span>';
-$_['entry_country']                = 'Pa&iacute;s de origen:<span class="help">Ingresa el c&oacute;digo de dos letras del pa&iacute;s de origen.</span>';
-$_['entry_postcode']               = 'C&oacute;digo postal o Zip de origen:<span class="help">Ingresa el c&oacute;digo postal o Zip de origen.</span>';
-$_['entry_test']                   = 'Modo de pruebas:<span class="help">Use this module in Test (YES) or Production mode (NO)?</span>';
-$_['entry_quote_type']             = 'Tipo de cotizaci&oacute;n:<span class="help">Quote for Residential or Commercial Delivery.</span>';
-$_['entry_service']                = 'Servicios:<span class="help">Select the UPS services to be offered.</span>';
-$_['entry_insurance']              = 'Habilitar seguro:<span class="help">Enables insurance with product total as the value</span>';
-$_['entry_display_weight']         = 'Mostrar el peso de la entrega:<br /><span class="help">Do you want to display the shipping weight? (e.g. Delivery Weight : 2.7674 Kg\'s)</span>';
-$_['entry_weight_code']            = 'C&oacute;digo de peso:<br /><span class="help">Allowed kgs or lbs. Make sure you match the weight class with the UPS accepted weight code.</span>';
-$_['entry_weight_class']           = 'Unidad de peso:<span class="help">Set to kilograms or pounds.</span>';
-$_['entry_length_code']            = 'C&oacute;digo de longitud:<br /><span class="help">Make sure you match the measurement class with the measurement code.</span>';
-$_['entry_length_class']           = 'Unidad de longitud:<span class="help">Set to centimeters or inches.</span>';
-$_['entry_dimension']			   = 'Dimensiones (L x W x H):';
-$_['entry_tax']                    = 'Clase de impuesto:';
-$_['entry_geo_zone']               = 'Zona geogr&aacute;fica:';
+$_['entry_state']                  = 'Estado o provincia de origen:<span class="help">Ingresa el código de dos letras para tu estado o provincia de origen.</span>';
+$_['entry_country']                = 'País de origen:<span class="help">Ingresa el código de dos letras del país de origen.</span>';
+$_['entry_postcode']               = 'Código postal o Zip de origen:<span class="help">Ingresa el código postal o Zip de origen.</span>';
+$_['entry_test']                   = 'Modo de pruebas:<span class="help">Usar este módulo en pruebas (SÍ) o modo de producción (NO)?</span>';
+$_['entry_quote_type']             = 'Tipo de cotización:<span class="help">Cotizar para entrega residencial o comercial.</span>';
+$_['entry_service']                = 'Servicios:<span class="help">Selecciona los servicios de UPS a ofrecer.</span>';
+$_['entry_insurance']              = 'Habilitar seguro:<span class="help">Habilita el seguro con el total del producto como el valor.</span>';
+$_['entry_display_weight']         = 'Mostrar el peso de la entrega:<br /><span class="help">¿Deseas mostrar el peso del envío? (p.ej.: peso del envío : 2,7674 Kg)</span>';
+$_['entry_weight_class']           = 'Unidad de peso:<span class="help">Establecer en kilogramos o libras.</span>';
+$_['entry_length_class']           = 'Unidad de longitud:<span class="help">Establecer en centímetros o pulgadas.</span>';
+$_['entry_dimension']			   = 'Dimensiones (Largo x Ancho x Altura):<br /><span class="help">Se asume que es el tamaño de tu empaque promedio. Las dimensiones de cada ítem no son soportadas en este momento, así que debes ingresar dimensiones promedio como 5x5x5.</span>';
+$_['entry_tax_class']              = 'Clase de impuesto:';
+$_['entry_geo_zone']               = 'Zona geográfica:';
 $_['entry_status']                 = 'Estado:';
 $_['entry_sort_order']             = 'Orden:';
+$_['entry_debug']      			   = 'Modo de depuración:<br /><span class="help">Guarda los datos de envío/recepción al registro del sistema.</span>';
 
 // Error
-$_['error_permission']             = 'Advertencia: &iexcl;No tienes permiso para modificar env&iacute;os UPS (EE.UU.)!';
-$_['error_key']                    = '&iexcl;Se requiere la clave de acceso!';
-$_['error_username']               = '&iexcl;Se requiere el nombre de usuario!';
-$_['error_password']               = '&iexcl;Se requiere la contrase&ntilde;a!';
-$_['error_city']                   = '&iexcl;Ciudad de origen!';
-$_['error_state']                  = '&iexcl;Se requiere el estado o provincia de origen!';
-$_['error_country']                = '&iexcl;Se requiere el pa&iacute;s de origen!';
+$_['error_permission']             = 'Advertencia: ¡No tienes permiso para modificar envíos UPS (EE.UU.)!';
+$_['error_key']                    = '¡Se requiere la clave de acceso!';
+$_['error_username']               = '¡Se requiere el nombre de usuario!';
+$_['error_password']               = '¡Se requiere la contraseña!';
+$_['error_city']                   = '¡Ciudad de origen!';
+$_['error_state']                  = '¡Se requiere el estado o provincia de origen!';
+$_['error_country']                = '¡Se requiere el país de origen!';
+$_['error_dimension']              = '¡Se requieren las dimensiones promedio!';
 ?>

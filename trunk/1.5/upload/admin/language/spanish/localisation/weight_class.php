@@ -20,6 +20,6 @@ $_['entry_value']      = 'Valor:<br /><span class="help">Déjalo en 1.00000 si e
 $_['error_permission'] = 'Advertencia: ¡No tienes permiso para modificar las unidades de peso!';
 $_['error_title']      = '¡El título de la unidad de peso debe tener entre 3 y 32 caracteres!';
 $_['error_unit']       = '¡La unidad de peso debe tener entre 1 y 4 caracteres!';
-$_['error_default']    = 'Advertencia: ¡Esta unidad de peso no puede ser eliminada ya que está asignada actualmente como la unidad de peso predeterminada de la tienda!';
+$_['error_default']    = 'Advertencia: ¡Esta unidad de peso no se puede eliminar porque está asignada actualmente como la unidad de peso de la tienda predeterminada!';
 $_['error_product']    = 'Advertencia: ¡Esta unidad de peso no puede ser eliminada ya que está actualmente asignada a %s productos!';
 ?>

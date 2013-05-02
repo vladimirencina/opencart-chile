@@ -8,8 +8,8 @@ $_['text_default']          = 'Predeterminada';
 $_['text_approved']         = '¡Has aprobado %s cuentas!';
 $_['text_wait']             = '¡Por favor espera!';
 $_['text_balance']          = 'Balance:';
-$_['text_add_blacklist']    = 'Agregar a la lista negra';
-$_['text_remove_blacklist'] = 'Quitar de la lista negra';
+$_['text_add_ban_ip']       = 'Agregar dirección IP a bloquear';
+$_['text_remove_ban_ip']    = 'Quitar dirección IP bloqueada';
 
 // Column
 $_['column_name']           = 'Nombre del cliente';
@@ -19,6 +19,7 @@ $_['column_status']         = 'Estado';
 $_['column_login']          = 'Nombre de usuario dentro de la tienda';
 $_['column_approved']       = 'Aprobado';
 $_['column_date_added']     = 'Fecha de alta';
+$_['column_comment']        = 'Comentario';
 $_['column_description']    = 'Descripción';
 $_['column_amount']         = 'Monto';
 $_['column_points']         = 'Puntos';
@@ -47,9 +48,10 @@ $_['entry_postcode']        = 'Código postal:';
 $_['entry_country']         = 'País:';
 $_['entry_zone']            = 'Región o estado:';
 $_['entry_default']         = 'Dirección predeterminada:';
+$_['entry_comment']         = 'Comentario:';
+$_['entry_description']     = 'Descripción:';
 $_['entry_amount']          = 'Monto:';
 $_['entry_points']          = 'Puntos:<br /><span class="help">Usa menos para quitar puntos</span>';
-$_['entry_description']     = 'Descripción:';
 
 // Error
 $_['error_warning']         = 'Advertencia: ¡Por favor revisa el formulario cuidadosamente en busca de errores!';

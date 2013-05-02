@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']    = 'Reporte del cupón';
+$_['heading_title']    = 'Informe del cupón';
 
 // Column
 $_['column_name']      = 'Nombre del cupón';

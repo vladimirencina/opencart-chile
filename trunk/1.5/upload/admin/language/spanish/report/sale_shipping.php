@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']     = 'Reporte de envío';
+$_['heading_title']     = 'Informe de envío';
 
 // Text
 $_['text_year']         = 'Años';

@@ -4,7 +4,7 @@ $_['heading_title']       = 'Los más vendidos';
 
 // Text
 $_['text_module']         = 'Módulos';
-$_['text_success']        = 'Éxito: ¡Has modificado el módulo Los más vendidos!';
+$_['text_success']        = 'Éxito: ¡Has modificado el módulo los más vendidos!';
 $_['text_content_top']    = 'Arriba del contenido';
 $_['text_content_bottom'] = 'Debajo del contenido';
 $_['text_column_left']    = 'Columna izquierda';

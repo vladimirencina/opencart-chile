@@ -20,9 +20,9 @@ $_['entry_country']          = 'País:';
 // Error
 $_['error_permission']       = 'Advertencia: ¡No tienes permiso para modificar las zonas!';
 $_['error_name']             = '¡El nombre de la zona debe tener entre 3 y 128 caracteres!';
-$_['error_default']          = 'Advertencia: ¡Esta zona no puede ser eliminada ya que está asignada actualmente como la zona predeterminada de la tienda!';
-$_['error_store']            = 'Advertencia: ¡Esta zona no puede ser eliminada ya que está asignada actualmente a %s tiendas!';
-$_['error_address']          = 'Advertencia: ¡Esta zona no puede ser eliminada ya que está asignada actualmente a %s entradas de la libreta de direcciones!';
-$_['error_affiliate']        = 'Advertencia: ¡Esta zona no puede ser eliminada ya que está asignada actualmente a %s afiliados!';
-$_['error_zone_to_geo_zone'] = 'Advertencia: ¡Esta zona no puede ser eliminada ya que está asignada actualmente a %s zonas para zonas geográficas!';
+$_['error_default']          = 'Advertencia: ¡Esta zona no se puede eliminar porque está asignada actualmente como la zona de la tienda predeterminada!';
+$_['error_store']            = 'Advertencia: ¡Esta zona no se puede eliminar porque está asignada actualmente a %s tiendas!';
+$_['error_address']          = 'Advertencia: ¡Esta zona no se puede eliminar porque está asignada actualmente a %s entradas de la libreta de direcciones!';
+$_['error_affiliate']        = 'Advertencia: ¡Esta zona no se puede eliminar porque está asignada actualmente a %s afiliados!';
+$_['error_zone_to_geo_zone'] = 'Advertencia: ¡Esta zona no se puede eliminar porque está asignada actualmente a %s zonas para zonas geográficas!';
 ?>

@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']          = 'Categorías';
+$_['heading_title']          = 'Categoría';
 
 // Text
 $_['text_success']           = 'Éxito: ¡Has modificado las categorías!';
@@ -20,6 +20,7 @@ $_['entry_meta_keyword'] 	 = 'Palabras clave para la etiqueta Meta:';
 $_['entry_meta_description'] = 'Descripción para la etiqueta Meta:';
 $_['entry_description']      = 'Descripción:';
 $_['entry_parent']           = 'Categoría padre:';
+$_['entry_filter']           = 'Filtros:<br /><span class="help">(Se autocompleta)</span>';
 $_['entry_store']            = 'Tiendas:';
 $_['entry_keyword']          = 'Palabra clave para SEO:<br/><span class="help">No uses espacios, en su lugar remplaza los espacios por - y asegúrate de que la palabra clave sea globalmente única.</span>';
 $_['entry_image']            = 'Imagen:';

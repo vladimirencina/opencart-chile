@@ -16,8 +16,8 @@ $_['text_reviews']      = 'Basada en %s puntuaciones.';
 $_['text_summary']      = 'Resumen';
 $_['text_weight']       = 'Peso';
 $_['text_dimension']    = 'Dimensiones (L x W x H)';
-$_['text_remove']       = 'Quitar';
 $_['text_compare']      = 'Comparar producto (%s)';
-$_['text_success']      = '&Eacute;xito: &iexcl;Ud. ha agregado <a href="%s">%s</a> al <a href="%s">comparador de productos</a>!';
+$_['text_success']      = 'Éxito: ¡Ud. ha agregado <a href="%s">%s</a> al <a href="%s">comparador de productos</a>!';
+$_['text_remove']       = 'Quitar';
 $_['text_empty']        = 'Ud. no ha elegido productos para comparar.';
 ?>

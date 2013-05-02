@@ -9,7 +9,6 @@ $_['text_order']      = 'ID de pedido:';
 $_['text_date_added'] = 'Fecha de alta:';
 $_['text_name']       = 'Nombre:';
 $_['text_remaining']  = 'Remanente:';
-$_['text_size']       = 'Tama&ntilde;o:';
-$_['text_download']   = 'Descargar';
-$_['text_empty']      = '&iexcl;Usted no ha hecho pedidos descargables previamente!';
+$_['text_size']       = 'Tamaño:';
+$_['text_empty']      = '¡Usted no ha hecho pedidos descargables previamente!';
 ?>

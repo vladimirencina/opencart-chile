@@ -1,26 +1,28 @@
 <?php
 // Heading
-$_['heading_title']  = 'Cont&aacute;ctenos';
+$_['heading_title']  = 'Contáctenos';
 
 // Text 
-$_['text_address']   = 'Direcci&oacute;n:';
-$_['text_email']     = 'Correo electr&oacute;nico:';
-$_['text_telephone'] = 'Tel&eacute;fono:';
+$_['text_location']  = 'Nuestra ubicación';
+$_['text_contact']   = 'Formulario de contacto';
+$_['text_address']   = 'Dirección:';
+$_['text_email']     = 'Correo electrónico:';
+$_['text_telephone'] = 'Teléfono:';
 $_['text_fax']       = 'Fax:';
-$_['text_message']   = '<p>Su pregunta fue enviada exitosamente al due&ntilde;o de la tienda!</p>';
+$_['text_message']   = '<p>¡Su pregunta fue enviada exitosamente al dueño de la tienda!</p>';
 
 // Entry Fields
 $_['entry_name']     = 'Nombre:';
-$_['entry_email']    = 'Direcci&oacute;n de correo electr&oacute;nico:';
-$_['entry_enquiry']  = 'Pregunta:';
-$_['entry_captcha']  = 'Ingrese el c&oacute;digo en el recuadro de m&aacute;s abajo:';
+$_['entry_email']    = 'Dirección de correo electrónico:';
+$_['entry_enquiry']  = 'Consulta:';
+$_['entry_captcha']  = 'Ingrese el código en el recuadro siguiente:';
 
 // Email
-$_['email_subject']  = 'Pregunta %s';
+$_['email_subject']  = 'Consulta %s';
 
 // Errors
-$_['error_name']     = '&iexcl;El nombre debe tener entre 3 y 32 caracteres!';
-$_['error_email']    = '&iexcl;La direcci&oacute;n de correo electr&oacute;nico no parece ser v&aacute;lida!';
-$_['error_enquiry']  = '&iexcl;La pregunta debe tener entre 10 y 1000 caracteres!';
-$_['error_captcha']  = '&iexcl;El c&oacute;digo de verificaci&oacute;n no coincide con la imagen!';
+$_['error_name']     = '¡El nombre debe tener entre 3 y 32 caracteres!';
+$_['error_email']    = '¡La dirección de correo electrónico no parece ser válida!';
+$_['error_enquiry']  = '¡La consulta debe tener entre 10 y 3000 caracteres!';
+$_['error_captcha']  = '¡El código de verificación no coincide con la imagen!';
 ?>

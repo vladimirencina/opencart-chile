@@ -4,18 +4,19 @@ $_['heading_title']                 = 'Programa de afiliados';
 
 // Text
 $_['text_account']                  = 'Cuenta';
-$_['text_login']                    = 'Iniciar sesi&oacute;n';
-$_['text_description']              = '<p>El programa de afiliados de %s es gratis y permite que los miembros obtengan ingresos poniendo un enlace o enlaces en su sitio web el cual haga publicidad a %s o a productos espec&iacute;ficos. Cualquier venta hecha a clientes que hayan hecho clic en esos enlaces obtendr&aacute;n la comisi&oacute;n de afiliado. La tasa est&aacute;ndar de comisi&oacute;n es actualmente del %s.</p><p>Para mayor informaci&oacute;n, visite nuestra p&aacute;gina de P+F o revise los t&eacute;rminos y condiciones del programa de afiliados.</p>';
+$_['text_login']                    = 'Iniciar sesión';
+$_['text_description']              = '<p>El programa de afiliados de %s es gratis y permite que los miembros obtengan ingresos poniendo un enlace o enlaces en su sitio web el cual haga publicidad a %s o a productos específicos. Cualquier venta hecha a clientes que hayan hecho clic en esos enlaces obtendrán la comisión de afiliado. La tasa estándar de comisión es actualmente de %s.</p><p>Para mayor información, visite nuestra página de P+F o revise los términos y condiciones del programa de afiliados.</p>';
 $_['text_new_affiliate']            = 'Nuevo afiliado';
-$_['text_register_account']         = '<p>No soy un afiliado actualmente.</p><p>Haga clic en continuar para crear una cuenta de nuevo afiliado. Por favor note que esto no tiene relaci&oacute;n de ninguna forma con su cuenta de cliente.</p>';
-$_['text_returning_affiliate']      = 'Inicio de sesi&oacute;n de afiliado';
+$_['text_register_account']         = '<p>No soy un afiliado actualmente.</p><p>Haga clic en continuar para crear una cuenta de nuevo afiliado. Por favor tome en cuenta que esta no tiene relación de ninguna forma con su cuenta de cliente.</p>';
+$_['text_returning_affiliate']      = 'Inicio de sesión de afiliado';
 $_['text_i_am_returning_affiliate'] = 'Soy un afiliado ya inscrito.';
-$_['text_forgotten']                = 'Olvid&eacute; mi contrase&ntilde;a';
+$_['text_forgotten']                = 'Olvidé mi contraseña';
 
 // Entry
-$_['entry_email']                   = 'Correo electr&oacute;nico de afiliado:';
-$_['entry_password']                = 'Contrase&ntilde;a:';
+$_['entry_email']                   = 'Correo electrónico de afiliado:';
+$_['entry_password']                = 'Contraseña:';
 
 // Error
-$_['error_login']                   = 'Error: La direcci&oacute;n de correo electr&oacute;nico no existe o la contrase&ntilde;a es incorrecta.';
+$_['error_login']                   = 'Advertencia: No coincide la dirección de correo electrónico y/o la contraseña.';
+$_['error_approved']                = 'Advertencia: Su cuenta requiere aprobación antes de que puede iniciar sesión.';
 ?>

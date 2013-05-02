@@ -4,7 +4,7 @@ $_['heading_title']     = 'Disposiciones';
 
 // Text
 $_['text_success']      = 'Éxito: ¡Has modificado las disposiciones!';
-$_['text_default']      = 'Predeterminado';
+$_['text_default']      = 'Predeterminada';
 
 // Column
 $_['column_name']       = 'Nombre de la disposición';

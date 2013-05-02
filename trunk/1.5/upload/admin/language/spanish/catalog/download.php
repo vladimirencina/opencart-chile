@@ -21,10 +21,10 @@ $_['entry_update']     = 'Empujar a clientes anteriores:<br /><span class="help"
 // Error
 $_['error_permission'] = 'Advertencia: ¡No tienes permiso para modificar las descargas!';
 $_['error_name']       = '¡El nombre debe tener entre 3 y 64 caracteres!';
-$_['error_upload']     = '¡Subida requerida!';
+$_['error_upload']     = '¡Carga de archivo requerida!';
 $_['error_filename']   = '¡El nombre del archivo debe tener entre 3 y 128 caracteres!';
 $_['error_exists']     = '¡El archivo no existe!';
 $_['error_mask']       = '¡La máscara debe tener entre 3 y 128 caracteres!';
 $_['error_filetype']   = '¡Tipo de archivo no válido!';
-$_['error_product']    = 'Advertencia: ¡Esta descarga no se puede borrar porque actualmente está asignada a %s productos!';
+$_['error_product']    = 'Advertencia: ¡Esta descarga no se puede borrar porque está asignada actualmente a %s productos!';
 ?>
