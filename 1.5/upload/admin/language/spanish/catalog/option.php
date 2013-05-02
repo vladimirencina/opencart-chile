@@ -28,12 +28,12 @@ $_['column_action']       = 'Acción';
 // Entry
 $_['entry_name']         = 'Nombre de la opción:';
 $_['entry_type']         = 'Tipo:';
-$_['entry_value']        = 'Nombre del valor de la opción:';
+$_['entry_option_value'] = 'Nombre del valor de la opción:';
 $_['entry_image']        = 'Imagen:';
 $_['entry_sort_order']   = 'Orden:';
 
 // Error
-$_['error_permission']   = 'Warning: ¡No tienes permiso para modificar las opciones!';
+$_['error_permission']   = 'Advertencia: ¡No tienes permiso para modificar las opciones!';
 $_['error_name']         = '¡El nombre de la opción debe tener entre 1 y 128 caracteres!';
 $_['error_type']         = 'Advertencia: ¡Se requieren los valores de la opción!';
 $_['error_option_value'] = '¡El nombre del valor de la opción de tener entre 1 y 128 caracteres!';

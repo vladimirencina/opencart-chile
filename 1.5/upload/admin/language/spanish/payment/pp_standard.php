@@ -13,7 +13,7 @@ $_['text_sale']						 = 'Venta';
 $_['entry_email']					 = 'Correo electrónico:';
 $_['entry_test']					 = 'Modo de prueba:';
 $_['entry_transaction']				 = 'Método de transacción:';
-$_['entry_debug']					 = 'Modo de depuración:<br/><span class="help">Registra información adicional en el registro del sistema.</span>';
+$_['entry_debug']					 = 'Modo de depuración:<br/><span class="help">Ingresa información adicional en el registro del sistema.</span>';
 $_['entry_total']                    = 'Total:<br /><span class="help">El pago total que el pedido debe alcanzar antes de que este medio de pago se active.</span>';
 $_['entry_canceled_reversal_status'] = 'Estado de la revocación cancelada:';
 $_['entry_completed_status']         = 'Estado completo:';

@@ -1,4 +1,4 @@
 <?php
 // Text
-$_['text_error'] = '&iexcl;La p&aacute;gina de informaci&oacute;n no se encontr&oacute;!';
+$_['text_error'] = '¡La página de información no se encontró!';
 ?>

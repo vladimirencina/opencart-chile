@@ -11,10 +11,10 @@ $_['text_column_left']    = 'Columna izquierda';
 $_['text_column_right']   = 'Columna derecha';
 
 // Entry
-$_['entry_banner']        = 'Banner:';
+$_['entry_banner']        = 'Anuncio:';
 $_['entry_limit']         = 'Límite:';
 $_['entry_scroll']        = 'Barra de desplazamiento:';
-$_['entry_image']         = 'Imagen (Ancho x Alto)';
+$_['entry_image']         = 'Imagen (Ancho x Alto) y tipo de cambio de tamaño:';
 $_['entry_layout']        = 'Disposición:';
 $_['entry_position']      = 'Posición:';
 $_['entry_status']        = 'Estado:';

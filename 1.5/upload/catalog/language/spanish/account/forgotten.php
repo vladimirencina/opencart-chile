@@ -1,17 +1,17 @@
 <?php
 // Heading 
-$_['heading_title']   = '&iquest;Olvid&oacute; su contrase&ntilde;a?';
+$_['heading_title']   = '¿Olvidó su contraseña?';
 
 // Text
 $_['text_account']    = 'Cuenta';
-$_['text_forgotten']  = 'Contrase&ntilde;a olvidada';
-$_['text_your_email'] = 'Direcci&oacute;n de correo electr&oacute;nico';
-$_['text_email']      = 'Ingrese la direcci&oacute;n de correo electr&oacute;nico asociada a su cuenta. Haga clic para enviar y tener su contrase&ntilde;a en su casilla de correo electr&oacute;nico.';
-$_['text_success']    = '&Eacute;xito: Una nueva contrase&ntilde;a ha sido enviada a su direcci&oacute;n de correo electr&oacute;nico.';
+$_['text_forgotten']  = 'Contraseña olvidada';
+$_['text_your_email'] = 'Su dirección de correo electrónico';
+$_['text_email']      = 'Ingrese la dirección de correo electrónico asociada a su cuenta. Haga clic en enviar para tener su contraseña en su casilla de correo electrónico.';
+$_['text_success']    = 'Éxito: Una nueva contraseña ha sido enviada a su dirección de correo electrónico.';
 
 // Entry
-$_['entry_email']     = 'Direcci&oacute;n de correo electr&oacute;nico:';
+$_['entry_email']     = 'Dirección de correo electrónico:';
 
 // Error
-$_['error_email']     = 'Error: &iexcl;La direcci&oacute;n de correo electr&oacute;nico no se encuentra en nuestros registros, por favor intente de nuevo!';
+$_['error_email']     = 'Advertencia: ¡La dirección de correo electrónico no se encuentra en nuestros registros, por favor intente de nuevo!';
 ?>

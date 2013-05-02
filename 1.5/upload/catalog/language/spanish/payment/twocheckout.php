@@ -1,4 +1,4 @@
 <?php
 // Text
-$_['text_title'] = 'Tarjeta de cr&eacute;dito o d&eacute;bito (2Checkout)';
+$_['text_title'] = 'Tarjeta de crédito o débito (2Checkout)';
 ?>

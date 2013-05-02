@@ -26,8 +26,8 @@ $_['error_warning']     = 'Advertencia: ¡Por favor revisa cuidadosamente los er
 $_['error_permission']  = 'Advertencia: ¡No tienes permiso para modificar la información!';
 $_['error_title']       = '¡El título de la información debe tener entre 3 y 64 caracteres!';
 $_['error_description'] = '¡La descripción debe tener más de 3 caracteres!';
-$_['error_account']     = 'Advertencia: ¡Esta página de información no se puede eliminar porque está actualmente asignada a los términos de la cuenta de la tienda predeterminada!';
-$_['error_checkout']    = 'Advertencia: ¡Esta página de información no se puede eliminar porque está actualmente asignada a los términos de compra de la tienda por defecto!';
+$_['error_account']     = 'Advertencia: ¡Esta página de información no se puede eliminar porque está actualmente asignada a los términos de la cuenta de la tienda!';
+$_['error_checkout']    = 'Advertencia: ¡Esta página de información no se puede eliminar porque está actualmente asignada a los términos de compra de la tienda!';
 $_['error_affiliate']   = 'Advertencia: ¡Esta página de información no se puede eliminar porque está asignada actualmente a los términos de afiliado de la tienda!';
 $_['error_store']       = 'Advertencia: ¡Esta página de información no se puede eliminar porque está actualmente siendo utilizada por %s tiendas!';
 ?>

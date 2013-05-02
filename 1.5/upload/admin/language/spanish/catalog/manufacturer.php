@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']      = 'Fabricantes';
+$_['heading_title']      = 'Fabricante';
 
 // Text
 $_['text_success']       = 'Éxito: ¡Has modificado los fabricantes!';
@@ -27,5 +27,5 @@ $_['entry_type']         = 'Tipo:';
 // Error
 $_['error_permission']   = 'Advertencia: ¡No tienes permiso para modificar los fabricantes!';
 $_['error_name']         = '¡El nombre del fabricante debe tener entre 3 y 64 caracteres!';
-$_['error_product']      = 'Advertencia: ¡Este fabricante no puede ser eliminado porque actualmente está asignado a %s productos!';
+$_['error_product']      = 'Advertencia: ¡Este fabricante no puede ser eliminado porque está asignado actualmente a %s productos!';
 ?>

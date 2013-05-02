@@ -12,13 +12,13 @@ $_['text_column_right']   = 'Columna derecha';
 
 // Entry
 $_['entry_limit']         = 'Límite:';
-$_['entry_image']         = 'Imagen (Ancho x Alto)';
+$_['entry_image']         = 'Imagen (Ancho x Alto) y tipo de cambio de tamaño:';
 $_['entry_layout']        = 'Disposición:';
 $_['entry_position']      = 'Posición:';
 $_['entry_status']        = 'Estado:';
 $_['entry_sort_order']    = 'Orden:';
 
 // Error
-$_['error_permission']    = 'Advertencia: ¡No tienes permiso para modificar el módulo de especiales!';
+$_['error_permission']    = 'Advertencia: ¡No tienes permiso para modificar el módulo de ofertas especiales!';
 $_['error_image']         = '¡Se requieren las dimensiones del ancho y alto de la imagen!';
 ?>

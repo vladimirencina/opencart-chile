@@ -7,8 +7,8 @@ $_['text_module']         = 'Módulos';
 $_['text_success']        = 'Éxito: ¡Has modificado el módulo cuenta!';
 $_['text_content_top']    = 'Arriba del contenido';
 $_['text_content_bottom'] = 'Abajo del contenido';
-$_['text_column_left']    = 'Izquierda de la columna';
-$_['text_column_right']   = 'Derecha de la columna';
+$_['text_column_left']    = 'Columna izquierda';
+$_['text_column_right']   = 'Columna derecha';
 
 // Entry
 $_['entry_layout']        = 'Disposición:';

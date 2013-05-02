@@ -16,5 +16,5 @@ $_['entry_name']       = 'Nombre del estado de devolución:';
 $_['error_permission'] = 'Advertencia: ¡No tienes permiso para modificar los estados de devolución!';
 $_['error_name']       = '¡Los nombres de los estados de devolución deben tener entre 3 y 32 caracteres!';
 $_['error_default']    = 'Advertencia: ¡Este estado de devolución no puede ser eliminado porque està asignado actualmente como el estado de devolución predeterminado.';
-$_['error_return']     = 'Advertencia: ¡Este estado de devolución no puede ser eliminado porque está asignado a %s devoluciones!';
+$_['error_return']     = 'Advertencia: ¡Este estado de devolución no puede ser eliminado porque está asignado actualmente a %s devoluciones!';
 ?>

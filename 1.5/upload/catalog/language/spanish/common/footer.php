@@ -1,17 +1,16 @@
 <?php
 // Text
-$_['text_information']  = 'Informaci&oacute;n';
+$_['text_information']  = 'Información';
 $_['text_service']      = 'Servicio al cliente';
 $_['text_extra']        = 'Extras';
-$_['text_account']      = 'Cuenta';
-$_['text_contact']      = 'Cont&aacute;ctenos';
+$_['text_contact']      = 'Contáctenos';
 $_['text_return']       = 'Devoluciones';
 $_['text_sitemap']      = 'Mapa del sitio';
 $_['text_manufacturer'] = 'Marcas';
 $_['text_voucher']      = 'Tarjetas de regalo';
 $_['text_affiliate']    = 'Afiliados';
-$_['text_special']      = 'Especiales';
-$_['text_login']        = 'Iniciar sesi&oacute;n';
+$_['text_special']      = 'Ofertas especiales';
+$_['text_account']      = 'Cuenta';
 $_['text_order']        = 'Historial de pedidos';
 $_['text_wishlist']     = 'Lista de deseos';
 $_['text_newsletter']   = 'Hoja informativa';

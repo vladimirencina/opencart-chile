@@ -35,7 +35,7 @@ $_['column_action']                 = 'Acción';
 $_['entry_range']                   = 'Seleccionar rango:';
 
 // Error
-$_['error_install']                 = 'Advertencia: ¡La carpeta install todavía existe!';
+$_['error_install']                 = 'Advertencia: ¡La carpeta install todavía existe y debería ser eliminada por razones de seguridad!';
 $_['error_image']                   = 'Advertencia: ¡La carpeta de imágenes %s no se puede escribir!';
 $_['error_image_cache']             = 'Advertencia: ¡La carpeta caché de imágenes %s no se puede escribir!';
 $_['error_cache']                   = 'Advertencia: ¡La carpeta caché %s no se puede escribir!';

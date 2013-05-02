@@ -3,5 +3,5 @@
 $_['text_title']       = 'Transferencia bancaria';
 $_['text_instruction'] = 'Instrucciones para transferencia bancaria.';
 $_['text_description'] = 'Por favor transfiera el monto total a la siguiente cuenta bancaria.';
-$_['text_payment']     = 'Su orden no se despachar&aacute; hasta que recibamos el pago.';
+$_['text_payment']     = 'Su orden no se despachará hasta que recibamos el pago.';
 ?>

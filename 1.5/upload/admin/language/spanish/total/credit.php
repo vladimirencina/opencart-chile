@@ -1,15 +1,15 @@
 <?php
 // Heading
-$_['heading_title']    = 'Cr&eacute;dito de la tienda';
+$_['heading_title']    = 'Crédito de la tienda';
 
 // Text
 $_['text_total']       = 'Totales del pedido';
-$_['text_success']     = '&Eacute;xito: &iexcl;Has modificado el cr&eacute;dito total de la tienda!';
+$_['text_success']     = 'Éxito: ¡Has modificado el crédito total de la tienda!';
 
 // Entry
 $_['entry_status']     = 'Estado:';
 $_['entry_sort_order'] = 'Orden:';
 
 // Error
-$_['error_permission'] = 'Advertencia: &iexcl;No tienes permiso para modificar el cr&eacute;dito total de la tienda!';
+$_['error_permission'] = 'Advertencia: ¡No tienes permiso para modificar el crédito total de la tienda!';
 ?>

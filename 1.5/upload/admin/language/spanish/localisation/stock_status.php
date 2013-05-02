@@ -15,5 +15,5 @@ $_['entry_name']       = 'Nombre del estado de existencia en bodega:';
 // Error
 $_['error_permission'] = 'Advertencia: ¡No tienes permiso para modificar los estados de existencia en bodega!';
 $_['error_name']       = '¡El nombre del estado de existencia en bodega debe tener entre 3 y 32 caracteres!';
-$_['error_product']    = 'Advertencia: ¡Este estado de existencia en bodega no puede ser eliminado ya que está asignado actualmente a %s productos!';
+$_['error_product']    = 'Advertencia: ¡Este estado de existencia en bodega no puede ser eliminado porque está asignado actualmente a %s productos!';
 ?>

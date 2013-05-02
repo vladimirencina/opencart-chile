@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']         = 'Reporte de crédito del cliente';
+$_['heading_title']         = 'Informe de crédito del cliente';
 
 // Column
 $_['column_customer']       = 'Nombre del cliente';

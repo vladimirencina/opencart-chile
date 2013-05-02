@@ -4,23 +4,21 @@ $_['heading_title']      = 'Webpay Plus';
 
 // Text 
 $_['text_payment']       = 'Pago';
-$_['text_success']       = '&Eacute;xito: &iexcl;Has modificado los detalles de la cuenta de Webpay Plus!';
-$_['text_successful']    = 'Activo - Exitoso siempre';
-$_['text_declined']      = 'Activo - Declinar siempre';
-$_['text_off']           = 'Inactivo';
+$_['text_success']       = 'Éxito: ¡Has modificado los detalles de la cuenta de Webpay Plus!';
       
 // Entry
-$_['entry_merchant']     = 'ID de comerciante:';
-$_['entry_password']     = 'Contrase&ntilde;a de respuesta de pago:<br /><span class="help">Esto debe configurarse en el panel de control de WordPay.</span>';
-$_['entry_callback']     = 'URL de respuesta de pasada:<br /><span class="help">Esto debe configurarse en el panel de control de WordPay. Tambi&eacute;n necesitar&aacute;s confirmar el "Enable the Shopper Response".</span>';
+$_['entry_kcc_url']      = 'URL del KCC:<br /><span class="help">URL donde el KCC provisto por Transbank ha sido instalado en este servidor.</span>';
+$_['entry_kcc_path']     = 'Ruta del KCC:<br /><span class="help">Ruta donde el KCC provisto por Transbank ha sido instalado en este servidor.</span>';
+$_['entry_callback']     = 'URL de respuesta de pasada:<br /><span class="help">Esto debe configurarse en el archivo tbk_config.dat as HTML_TR_NORMAL.</span>';
 $_['entry_test']         = 'Modo de pruebas:';
+$_['entry_total']        = 'Total:<br /><span class="help">El pago total que el pedido debe alcanzar antes de que este medio de pago se active.</span>';
 $_['entry_order_status'] = 'Estado del pedido:';
-$_['entry_geo_zone']     = 'Zona geogr&aacute;fica:';
+$_['entry_geo_zone']     = 'Zona geográfica:';
 $_['entry_status']       = 'Estado:';
 $_['entry_sort_order']   = 'Orden:';
 
 // Error
-$_['error_permission']   = 'Advertencia: &iexcl;No tienes permiso para modificar el pago Webpay Plus!';
-$_['error_merchant']     = '&iexcl;Se requiere el ID de comerciante!';
-$_['error_password']     = '&iexcl;Se requiere la contrase&ntilde;a!';
+$_['error_permission']   = 'Advertencia: ¡No tienes permiso para modificar el pago Webpay Plus!';
+$_['error_kcc_url']      = '¡Se requiere la URL del KCC!';
+$_['error_kcc_path']     = '¡Se requiere la ruta del KCC!';
 ?>

@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']         = 'Reporte de pedidos del cliente';
+$_['heading_title']         = 'Informe de pedidos del cliente';
 
 // Text
 $_['text_all_status']       = 'Todos los estados';

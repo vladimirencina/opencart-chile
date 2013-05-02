@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']     = 'Reporte de comisión del afiliado';
+$_['heading_title']     = 'Informe de comisión del afiliado';
 
 // Column
 $_['column_affiliate']  = 'Nombre del afiliado';

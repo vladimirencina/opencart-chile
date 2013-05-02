@@ -1,7 +1,7 @@
 <?php
 // Heading
-$_['heading_title'] = '&iexcl;La p&aacute;gina solicitada no se pudo encontrar!';
+$_['heading_title'] = '¡La página solicitada no se encuentra!';
 
 // Text
-$_['text_error']    = 'La p&aacute;gina solicitada no se pudo encontrar.';
+$_['text_error']    = 'La página solicitada no se encuentra.';
 ?>

@@ -4,12 +4,13 @@ $_['heading_title']    = 'Cuenta';
 
 // Text
 $_['text_register']    = 'Registrar';
-$_['text_login']       = 'Iniciar sesion';
-$_['text_logout']      = 'Cerrar sesion';
-$_['text_forgotten']   = 'Olvid&eacute; mi contrase&ntilde;a';
+$_['text_login']       = 'Iniciar sesión';
+$_['text_logout']      = 'Cerrar sesión';
+$_['text_forgotten']   = 'Olvidé mi contraseña';
 $_['text_account']     = 'Mi cuenta';
 $_['text_edit']        = 'Editar la cuenta';
-$_['text_password']    = 'Contrase&ntilde;a';
+$_['text_password']    = 'Contraseña';
+$_['text_address']     = 'Libreta de direcciones';
 $_['text_wishlist']    = 'Lista de deseos';
 $_['text_order']       = 'Historial de pedidos';
 $_['text_download']    = 'Descargas';

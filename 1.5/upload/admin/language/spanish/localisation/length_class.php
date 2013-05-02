@@ -20,6 +20,6 @@ $_['entry_value']      = 'Valor:<br /><span class="help">Déjalo en 1.00000 si e
 $_['error_permission'] = 'Advertencia: ¡No tienes permiso para modificar las unidades de medida!';
 $_['error_title']      = '¡El título de la medida debe tener entre 3 y 32 caracteres!';
 $_['error_unit']       = '¡La unidad de medida debe tener entre 1 y 4 caracteres!';
-$_['error_default']    = 'Advertencia: ¡Esta unidad de medida no puede ser eliminada ya que está actualmente asignada como la unidad de medida predeterminada de la tienda!';
+$_['error_default']    = 'Advertencia: ¡Esta unidad de medida no puede ser eliminada ya que está actualmente asignada como la unidad de medida de la tienda predeterminada!';
 $_['error_product']    = 'Advertencia: ¡Esta unidad de medida no puede ser eliminada ya que está actualmente asignada a %s productos!';
 ?>

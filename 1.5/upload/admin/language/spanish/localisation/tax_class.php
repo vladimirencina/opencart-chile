@@ -1,12 +1,12 @@
 <?php
 // Heading
-$_['heading_title']     = 'Clases de impuestos';
+$_['heading_title']     = 'Clases de impuesto';
 
 // Text
 $_['text_shipping']     = 'Dirección de despacho';
 $_['text_payment']      = 'Dirección de facturación';
 $_['text_store']        = 'Dirección de la tienda';
-$_['text_success']      = 'Éxito: ¡Has modificado las clases de impuestos!';
+$_['text_success']      = 'Éxito: ¡Has modificado las clases de impuesto!';
 
 // Column
 $_['column_title']      = 'Título de la clase de impuesto';

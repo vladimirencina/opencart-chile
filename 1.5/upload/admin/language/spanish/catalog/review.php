@@ -14,7 +14,7 @@ $_['column_date_added'] = 'Fecha de publicación';
 $_['column_action']     = 'Acción';
 
 // Entry
-$_['entry_product']     = 'Producto:<br /><span class="help">(Autocompletar)</span>';
+$_['entry_product']     = 'Producto:<br /><span class="help">(Se autocompleta)</span>';
 $_['entry_author']      = 'Autor:';
 $_['entry_rating']      = 'Calificación:';
 $_['entry_status']      = 'Estado:';

@@ -4,7 +4,7 @@ $_['heading_title']       = 'Información';
 
 // Text
 $_['text_module']         = 'Módulos';
-$_['text_success']        = 'Éxito: ¡Has modificado el módulo Información!';
+$_['text_success']        = 'Éxito: ¡Has modificado el módulo información!';
 $_['text_content_top']    = 'Encabezado del contenido';
 $_['text_content_bottom'] = 'Pie de página del contenido';
 $_['text_column_left']    = 'Columna izquierda';

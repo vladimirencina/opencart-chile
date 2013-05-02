@@ -1,6 +1,6 @@
 <?php
 // Heading
-$_['heading_title']  = 'Reporte de productos vistos';
+$_['heading_title']  = 'Informe de productos vistos';
 
 // Text
 $_['text_success']   = 'Éxito: ¡Has reiniciado el reporte de productos vistos!';
