@@ -16,12 +16,24 @@
       <th colspan="2" style="text-align: center;">Datos de la compra</th>
     </tr>
     <tr>
+      <td>Nombre del comercio:</td>
+      <td><?php echo ''; ?></td>
+    </tr>
+    <tr>
+      <td>URL del comercio:</td>
+      <td><?php echo ''; ?></td>
+    </tr>
+    <tr>
+      <td>Nombre del comprador:</td>
+      <td><?php echo ''; ?></td>
+    </tr>
+    <tr>
       <td>N&uacute;mero del pedido:</td>
       <td><?php echo $this->data['tbk_orden_compra']; ?></td>
     </tr>
     <tr>
       <td>Monto (pesos chilenos):</td>
-      <td><?php echo ($this->data['tbk_monto'] / 100); ?></td>
+      <td>$<?php echo ($this->data['tbk_monto'] / 100); ?></td>
     </tr>
     <tr>
       <th colspan="2" style="text-align: center;">Datos de la transacci&oacute;n</th>
@@ -62,10 +74,19 @@
       <td>N&uacute;mero de cuotas:</td>
       <td><?php echo $this->data['tbk_numero_cuotas']; ?></td>
     </tr>
+    <tr>
+      <td>Tipo de cuotas:</td>
+      <td><?php echo $this->data['tbk_tipo_cuotas']; ?></td>
+    </tr>
   </table>
   <hr />
   <p><?php echo $text_success; ?></p>
   <p><?php echo $text_success_wait; ?></p>
+  <!--
+Faltan:
+- Descripción de los bienes y/o servicios. Una Breve explicación que identifique lo que se compra o paga, indicar valor unitario. Valor del envió debe estar en línea separada (?).
+- Una lista de cualquier restricción relacionada con las devoluciones y reembolsos.
+  -->
 </div>
 </body>
 </html>

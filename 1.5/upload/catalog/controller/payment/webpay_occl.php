@@ -151,6 +151,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		$this->data['tbk_id_transaccion'] = 0;
 		$this->data['tbk_tipo_pago'] = 'XX';
 		$this->data['tbk_numero_cuotas'] = '00';
+		$this->data['tbk_tipo_cuotas'] = 'XX';
 		$this->data['tbk_mac'] = 0;
 
 		if (isset($this->request->post['TBK_ID_SESION']) && isset($this->request->post['TBK_ORDEN_COMPRA'])) {
@@ -168,6 +169,23 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$tbk_final_numero_tarjeta = explode('=', $tbk_details[5]);
 			$tbk_fecha_contable = explode('=', $tbk_details[6]);
 			$tbk_fecha_transaccion = explode('=', $tbk_details[7]);
+
+			if (substr($tbk_fecha_contable[1], 0, 2) == '12' && date('d') == '01') {
+				$tbk_anno_contable = date('Y') - 1;
+			} else	if ($tbk_fecha_contable == '01' && date('d') == '12') {
+				$tbk_anno_contable = date('Y') + 1;
+			} else {
+				$tbk_anno_contable = date('Y');
+			}
+
+			if (substr($tbk_fecha_transaccion[1], 0, 2) == '12' && date('d') == '01') {
+				$tbk_anno_transaccion = date('Y') - 1;
+			} else	if ($tbk_fecha_transaccion == '01' && date('d') == '12') {
+				$tbk_anno_transaccion = date('Y') + 1;
+			} else {
+				$tbk_anno_transaccion = date('Y');
+			}
+
 			$tbk_hora_transaccion = explode('=', $tbk_details[8]);
 			$tbk_id_transaccion = explode('=', $tbk_details[10]);
 			$tbk_tipo_pago = explode('=', $tbk_details[11]);
@@ -175,17 +193,41 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$tbk_mac = explode('=', $tbk_details[13]);
 
 			$this->data['tbk_orden_compra'] = $tbk_orden_compra[1];
-			$this->data['tbk_tipo_transaccion'] = $tbk_tipo_transaccion[1];
+			$this->data['tbk_tipo_transaccion'] = 'Venta';
+			//$this->data['tbk_tipo_transaccion'] = $tbk_tipo_transaccion[1];
 			$this->data['tbk_respuesta'] = $tbk_respuesta[1];
-			$this->data['tbk_monto'] = $tbk_monto[1];
+			$this->data['tbk_monto'] = number_format($tbk_monto[1], 0, ',', '.');
 			$this->data['tbk_codigo_autorizacion'] = $tbk_codigo_autorizacion[1];
-			$this->data['tbk_final_numero_tarjeta'] = '************' . $tbk_final_numero_tarjeta[1];
-			$this->data['tbk_fecha_contable'] = substr($tbk_fecha_contable[1], 2, 2) . '-' . substr($tbk_fecha_contable[1], 0, 2);
-			$this->data['tbk_fecha_transaccion'] = substr($tbk_fecha_transaccion[1], 2, 2) . '-' . substr($tbk_fecha_transaccion[1], 0, 2);
+			$this->data['tbk_final_numero_tarjeta'] = '************' . $tbk_final_numero_tarjeta[1];			
+			$this->data['tbk_fecha_contable'] = substr($tbk_fecha_contable[1], 2, 2) . '-' . substr($tbk_fecha_contable[1], 0, 2) . '-' . $tbk_anno_contable;
+			$this->data['tbk_fecha_transaccion'] = substr($tbk_fecha_transaccion[1], 2, 2) . '-' . substr($tbk_fecha_transaccion[1], 0, 2) . '-' . $tbk_anno_transaccion;
 			$this->data['tbk_hora_transaccion'] = substr($tbk_hora_transaccion[1], 0, 2) . ':' . substr($tbk_hora_transaccion[1], 2, 2) . ':' . substr($tbk_hora_transaccion[1], 4, 2);
 			$this->data['tbk_id_transaccion'] = $tbk_id_transaccion[1];
-			$this->data['tbk_tipo_pago'] = $tbk_tipo_pago[1];
-			$this->data['tbk_numero_cuotas'] = $tbk_numero_cuotas[1];
+
+			if ($tbk_tipo_pago[1] == 'VD') {
+				$this->data['tbk_tipo_pago'] = 'Redcompra';
+			} else {
+				$this->data['tbk_tipo_pago'] = 'Cr&eacute;dito';
+			}
+
+			if ($tbk_numero_cuotas[1] == 0) {
+				$this->data['tbk_numero_cuotas'] = '00';
+			} else {
+				$this->data['tbk_numero_cuotas'] = $tbk_numero_cuotas[1];
+			}
+
+			if ($tbk_tipo_pago[1] == 'VN') {
+				$this->data['tbk_tipo_cuotas'] = 'Sin cuotas';
+			} elseif ($tbk_tipo_pago[1] == 'VC') {
+				$this->data['tbk_tipo_cuotas'] = 'Cuotas normales';
+			} elseif ($tbk_tipo_pago[1] == 'SI') {
+				$this->data['tbk_tipo_cuotas'] = 'Sin inter&eacute;s';
+			} elseif ($tbk_tipo_pago[1] == 'CI') {
+				$this->data['tbk_tipo_cuotas'] = 'Cuotas comercio';
+			} elseif ($tbk_tipo_pago[1] == 'VD') {
+				$this->data['tbk_tipo_cuotas'] = 'D&eacute;bito';
+			}
+
 			$this->data['tbk_mac'] = $tbk_mac[1];
 		}
 
