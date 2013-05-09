@@ -13,6 +13,21 @@
   <hr />
   <p><?php echo $text_failure; ?></p>
   <p><?php echo $text_failure_wait; ?></p>
+  <!--
+Falta:
+- Dentro de la página de fracaso es obligatorio informar el Numero Orden de Compra. El mensaje que deben informar al tarjetahabiente debe ser:
+
+---
+Transacción Fracasada
+OC Nº
+Las posibles causas de este rechazo son:
+
+- Error en el ingreso de los datos de su tarjeta de crédito o débito (fecha y/o código de seguridad).
+- Su tarjeta de crédito o débito no cuenta con el cupo necesario para cancelar la compra.
+- Tarjeta aún no habilitada en el sistema financiero.
+- Si el problema persiste favor comuníquese con su banco emisor.
+---
+  -->
 </div>
 </body>
 </html>
