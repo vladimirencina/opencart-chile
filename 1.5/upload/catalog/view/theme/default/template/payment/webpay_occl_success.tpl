@@ -17,66 +17,66 @@
     </tr>
     <tr>
       <td>Nombre del comercio:</td>
-      <td><?php echo ''; ?></td>
+      <td><?php echo $tbk_nombre_comercio; ?></td>
     </tr>
     <tr>
       <td>URL del comercio:</td>
-      <td><?php echo ''; ?></td>
+      <td><?php echo $tbk_url_comercio; ?></td>
     </tr>
     <tr>
       <td>Nombre del comprador:</td>
-      <td><?php echo ''; ?></td>
+      <td><?php echo $tbk_nombre_comprador; ?></td>
     </tr>
     <tr>
       <td>N&uacute;mero del pedido:</td>
-      <td><?php echo $this->data['tbk_orden_compra']; ?></td>
+      <td><?php echo $tbk_orden_compra; ?></td>
     </tr>
     <tr>
       <td>Monto (pesos chilenos):</td>
-      <td>$<?php echo ($this->data['tbk_monto'] / 100); ?></td>
+      <td>$<?php echo ($tbk_monto / 100); ?></td>
     </tr>
     <tr>
       <th colspan="2" style="text-align: center;">Datos de la transacci&oacute;n</th>
     </tr>
     <tr>
       <td>Respuesta de la transacci&oacute;n:</td>
-      <td><?php echo $this->data['tbk_respuesta']; ?></td>
+      <td><?php echo $tbk_respuesta; ?></td>
     </tr>
     <tr>
       <td>C&oacute;digo de autorizaci&oacute;n:</td>
-      <td><?php echo $this->data['tbk_codigo_autorizacion']; ?></td>
+      <td><?php echo $tbk_codigo_autorizacion; ?></td>
     </tr>
     <tr>
       <td>Fecha contable:</td>
-      <td><?php echo $this->data['tbk_fecha_contable']; ?></td>
+      <td><?php echo $tbk_fecha_contable; ?></td>
     </tr>
     <tr>
       <td>Fecha de la transacci&oacute;n:</td>
-      <td><?php echo $this->data['tbk_fecha_transaccion']; ?></td>
+      <td><?php echo $tbk_fecha_transaccion; ?></td>
     </tr>
     <tr>
       <td>Hora de la transacci&oacute;n:</td>
-      <td><?php echo $this->data['tbk_hora_transaccion']; ?></td>
+      <td><?php echo $tbk_hora_transaccion; ?></td>
     </tr>
     <tr>
       <td>Tarjeta de cr&eacute;dito:</td>
-      <td><?php echo $this->data['tbk_final_numero_tarjeta']; ?></td>
+      <td><?php echo $tbk_final_numero_tarjeta; ?></td>
     </tr>
     <tr>
       <td>Tipo de transacci&oacute;n:</td>
-      <td><?php echo $this->data['tbk_tipo_transaccion']; ?></td>
+      <td><?php echo $tbk_tipo_transaccion; ?></td>
     </tr>
     <tr>
       <td>Tipo de pago:</td>
-      <td><?php echo $this->data['tbk_tipo_pago']; ?></td>
+      <td><?php echo $tbk_tipo_pago; ?></td>
     </tr>
     <tr>
       <td>N&uacute;mero de cuotas:</td>
-      <td><?php echo $this->data['tbk_numero_cuotas']; ?></td>
+      <td><?php echo $tbk_numero_cuotas; ?></td>
     </tr>
     <tr>
       <td>Tipo de cuotas:</td>
-      <td><?php echo $this->data['tbk_tipo_cuotas']; ?></td>
+      <td><?php echo $tbk_tipo_cuotas; ?></td>
     </tr>
   </table>
   <hr />

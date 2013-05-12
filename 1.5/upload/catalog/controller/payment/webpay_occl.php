@@ -106,6 +106,12 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 		$this->data['continue'] = $this->url->link('checkout/cart');
 
+		if (isset($this->session->data['order_id'])) {
+			$this->data['tbk_orden_compra'] = $this->session->data['order_id'];
+		} else {
+			$this->data['tbk_orden_compra'] = 0;
+		}
+
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/webpay_occl_failure.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/webpay_occl_failure.tpl';
 		} else {
@@ -139,14 +145,17 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 		$this->data['continue'] = $this->url->link('checkout/success');
 
+		$this->data['tbk_nombre_comercio'] = 'XX';
+		$this->data['tbk_url_comercio'] = 'XX';
+		$this->data['tbk_nombre_comprador'] = 'XX';
 		$this->data['tbk_orden_compra'] = 0;
 		$this->data['tbk_tipo_transaccion'] = 0;
 		$this->data['tbk_respuesta'] = 0;
 		$this->data['tbk_monto'] = 0;
 		$this->data['tbk_codigo_autorizacion'] = 0;
 		$this->data['tbk_final_numero_tarjeta'] = '************0000';
-		$this->data['tbk_fecha_contable'] = '00-00';
-		$this->data['tbk_fecha_transaccion'] = '00-00';
+		$this->data['tbk_fecha_contable'] = '00-00-0000';
+		$this->data['tbk_fecha_transaccion'] = '00-00-0000';
 		$this->data['tbk_hora_transaccion'] = '00:00:00';
 		$this->data['tbk_id_transaccion'] = 0;
 		$this->data['tbk_tipo_pago'] = 'XX';
@@ -172,7 +181,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 			if (substr($tbk_fecha_contable[1], 0, 2) == '12' && date('d') == '01') {
 				$tbk_anno_contable = date('Y') - 1;
-			} else	if ($tbk_fecha_contable == '01' && date('d') == '12') {
+			} elseif (substr($tbk_fecha_contable[1], 0, 2) == '01' && date('d') == '12') {
 				$tbk_anno_contable = date('Y') + 1;
 			} else {
 				$tbk_anno_contable = date('Y');
@@ -180,7 +189,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 			if (substr($tbk_fecha_transaccion[1], 0, 2) == '12' && date('d') == '01') {
 				$tbk_anno_transaccion = date('Y') - 1;
-			} else	if ($tbk_fecha_transaccion == '01' && date('d') == '12') {
+			} elseif (substr($tbk_fecha_transaccion[1], 0, 2) == '01' && date('d') == '12') {
 				$tbk_anno_transaccion = date('Y') + 1;
 			} else {
 				$tbk_anno_transaccion = date('Y');
@@ -192,11 +201,15 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$tbk_numero_cuotas = explode('=', $tbk_details[12]);
 			$tbk_mac = explode('=', $tbk_details[13]);
 
+			$this->data['tbk_nombre_comercio'] = $this->config->get('config_name');
+			$this->data['tbk_url_comercio'] = $this->data['base'];
+			$this->data['tbk_nombre_comprador'] = $this->customer->getFirstName() . ' ' . $this->customer->getLastName();
 			$this->data['tbk_orden_compra'] = $tbk_orden_compra[1];
 			$this->data['tbk_tipo_transaccion'] = 'Venta';
-			//$this->data['tbk_tipo_transaccion'] = $tbk_tipo_transaccion[1];
+//			$this->data['tbk_tipo_transaccion'] = $tbk_tipo_transaccion[1];
 			$this->data['tbk_respuesta'] = $tbk_respuesta[1];
-			$this->data['tbk_monto'] = number_format($tbk_monto[1], 0, ',', '.');
+			$this->data['tbk_monto'] = $tbk_monto[1];
+//			$this->data['tbk_monto'] = number_format($tbk_monto[1], 0, ',', '.');
 			$this->data['tbk_codigo_autorizacion'] = $tbk_codigo_autorizacion[1];
 			$this->data['tbk_final_numero_tarjeta'] = '************' . $tbk_final_numero_tarjeta[1];			
 			$this->data['tbk_fecha_contable'] = substr($tbk_fecha_contable[1], 2, 2) . '-' . substr($tbk_fecha_contable[1], 0, 2) . '-' . $tbk_anno_contable;
@@ -222,6 +235,8 @@ class ControllerPaymentWebpayOCCL extends Controller {
 				$this->data['tbk_tipo_cuotas'] = 'Cuotas normales';
 			} elseif ($tbk_tipo_pago[1] == 'SI') {
 				$this->data['tbk_tipo_cuotas'] = 'Sin inter&eacute;s';
+			} elseif ($tbk_tipo_pago[1] == 'S2') {
+				$this->data['tbk_tipo_cuotas'] = 'Dos cuotas sin inter&eacute;s';
 			} elseif ($tbk_tipo_pago[1] == 'CI') {
 				$this->data['tbk_tipo_cuotas'] = 'Cuotas comercio';
 			} elseif ($tbk_tipo_pago[1] == 'VD') {
@@ -230,6 +245,8 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 			$this->data['tbk_mac'] = $tbk_mac[1];
 		}
+
+//		$this->model_checkout_order->update($this->request->post['cartId'], $this->config->get('webpay_occl_order_status_id'), $message, false);
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/webpay_occl_success.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/webpay_occl_success.tpl';
