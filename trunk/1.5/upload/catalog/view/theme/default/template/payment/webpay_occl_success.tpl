@@ -39,16 +39,8 @@
       <th colspan="2" style="text-align: center;">Datos de la transacci&oacute;n</th>
     </tr>
     <tr>
-      <td>Respuesta de la transacci&oacute;n:</td>
-      <td><?php echo $tbk_respuesta; ?></td>
-    </tr>
-    <tr>
       <td>C&oacute;digo de autorizaci&oacute;n:</td>
       <td><?php echo $tbk_codigo_autorizacion; ?></td>
-    </tr>
-    <tr>
-      <td>Fecha contable:</td>
-      <td><?php echo $tbk_fecha_contable; ?></td>
     </tr>
     <tr>
       <td>Fecha de la transacci&oacute;n:</td>
