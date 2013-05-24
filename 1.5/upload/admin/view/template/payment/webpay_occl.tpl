@@ -31,6 +31,19 @@
               <?php } ?></td>
           </tr>
           <tr>
+            <td><?php echo $entry_return_policy; ?></td>
+            <td><select name="webpay_occl_return_policy">
+                  <option value="0"><?php echo $text_none; ?></option>
+                  <?php foreach ($informations as $information) { ?>
+                  <?php if ($information['information_id'] == $webpay_occl_return_policy) { ?>
+                  <option value="<?php echo $information['information_id']; ?>" selected="selected"><?php echo $information['title']; ?></option>
+                  <?php } else { ?>
+                  <option value="<?php echo $information['information_id']; ?>"><?php echo $information['title']; ?></option>
+                  <?php } ?>
+                  <?php } ?>
+                </select></td>
+          </tr>
+          <tr>
             <td><?php echo $entry_callback; ?></td>
             <td><textarea cols="40" rows="5"><?php echo $callback; ?></textarea></td>
           </tr>

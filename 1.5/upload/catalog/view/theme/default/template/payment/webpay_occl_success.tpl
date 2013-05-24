@@ -71,6 +71,7 @@
       <td><?php echo $tbk_tipo_cuotas; ?></td>
     </tr>
   </table>
+  <p>Revise nuestra <?php echo $return_policy; ?>.</p>
   <hr />
   <p><?php echo $text_success; ?></p>
   <p><?php echo $text_success_wait; ?></p>

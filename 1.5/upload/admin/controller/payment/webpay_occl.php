@@ -26,8 +26,13 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		$this->data['text_declined'] = $this->language->get('text_declined');
 		$this->data['text_off'] = $this->language->get('text_off');
 
+		$this->data['text_payment'] = $this->language->get('text_payment');
+		$this->data['text_none'] = $this->language->get('text_none');
+		$this->data['text_success'] = $this->language->get('text_success');
+
 		$this->data['entry_kcc_url'] = $this->language->get('entry_kcc_url');
 		$this->data['entry_kcc_path'] = $this->language->get('entry_kcc_path');
+		$this->data['entry_return_policy'] = $this->language->get('entry_return_policy');
 		$this->data['entry_callback'] = $this->language->get('entry_callback');
 		$this->data['entry_total'] = $this->language->get('entry_total');	
 		$this->data['entry_order_status'] = $this->language->get('entry_order_status');		
@@ -96,6 +101,16 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$this->data['webpay_occl_kcc_path'] = preg_replace("/\/catalog\//i", '/cgi-bin/', DIR_CATALOG, 1);
 		}
 
+		if (isset($this->request->post['webpay_occl_return_policy'])) {
+			$this->data['webpay_occl_return_policy'] = $this->request->post['webpay_occl_return_policy'];
+		} else {
+			$this->data['webpay_occl_return_policy'] = $this->config->get('webpay_occl_return_policy'); 
+		}
+
+		$this->load->model('catalog/information');
+
+		$this->data['informations'] = $this->model_catalog_information->getInformations();
+
 		$this->data['callback'] = HTTP_CATALOG . 'index.php?route=payment/webpay_occl/callback';
 
 		if (isset($this->request->post['webpay_occl_total'])) {
@@ -109,9 +124,9 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		} else {
 			$this->data['webpay_occl_order_status_id'] = $this->config->get('webpay_occl_order_status_id'); 
 		} 
-		
+
 		$this->load->model('localisation/order_status');
-		
+
 		$this->data['order_statuses'] = $this->model_localisation_order_status->getOrderStatuses();
 		
 		if (isset($this->request->post['webpay_occl_geo_zone_id'])) {
