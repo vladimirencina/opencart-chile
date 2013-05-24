@@ -34,22 +34,14 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 	public function callback() {
 		$this->data['tbk_answer'] = 'RECHAZADO';
-		// Ver el estado actual de la orden: $this->config->get('config_order_status_id')
-		// (al parecer, da '1' por defecto)
+		$tbk_ok = false;
 
-		if (isset($this->request->post['TBK_ID_SESION']) && file_exists(DIR_LOGS . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.log');) {
+		if (isset($this->request->post['TBK_ID_SESION']) && file_exists(DIR_LOGS . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.log')) {
 			$tbk_log_file = DIR_LOGS . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.log';
 			$tbk_log = fopen($tbk_log_file, 'r');
 			$tbk_log_string = fgets($tbk_log);
 			fclose($tbk_log);
 			$tbk_detalles = explode(';', $tbk_log_string);
-
-			$tbk_orden_compra_info = $this->model_checkout_order->getOrder($this->request->post['TBK_ID_SESION']);
-
-			if (isset($tbk_detalles) && count($tbk_detalles) >= 1) {
-				$tbk_monto = $tbk_detalles[0];
-				$tbk_orden_compra = $tbk_detalles[1];
-			}
 
 			if (isset($tbk_detalles) && count($tbk_detalles) >= 1) {
 				$tbk_monto = $tbk_detalles[0];
@@ -74,28 +66,55 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			} else {
 				$tbk_ok = false;
 			}
-		}
 
-		if ($tbk_ok == true) {
-			exec($this->config->get('webpay_occl_kcc_path') . 'tbk_check_mac.cgi ' . $tbk_cache_file, $tbk_result);
+			$this->load->model('checkout/order');
+			$order_info = $this->model_checkout_order->getOrder($this->request->post['TBK_ORDEN_COMPRA']);
+			$this->model_checkout_order->confirm($order_info['order_id'], $this->config->get('config_order_status_id'));
 
-			if ($tbk_result[0] == 'CORRECTO') {
-				$this->data['tbk_answer'] = 'ACEPTADO';
+			if ($tbk_ok == true) {
+				exec($this->config->get('webpay_occl_kcc_path') . 'tbk_check_mac.cgi ' . $tbk_cache_file, $tbk_result);
+
+				if ($tbk_result[0] == 'CORRECTO' && !$order_info['order_status_id']) {
+					$this->data['tbk_answer'] = 'ACEPTADO';
+				} else {
+					$this->data['tbk_answer'] = 'RECHAZADO';
+				}
+			}
+
+			if ($this->data['tbk_answer'] == 'ACEPTADO') {
+				$message = 'Transacci&oacute;n aprobada';
+				$this->model_checkout_order->update($order_info['order_id'], $this->config->get('webpay_occl_order_status_id'), $message, false);
 			} else {
-				$this->data['tbk_answer'] = 'RECHAZADO';
+				$message = '';
+				switch($this->request->post['TBK_RESPUESTA']) {
+					case '-1':
+						$message = 'Rechazo de transacci&oacute;n';
+						break;
+					case '-2':
+						$message = 'Transacci&oacute;n debe reintentarse';
+						break;
+					case '-3':
+						$message = 'Error en transacci&oacute;n';
+						break;
+					case '-4':
+						$message = 'Rechazo de transacci&oacute;n';
+						break;
+					case '-5':
+						$message = 'Rechazo por error de tasa';
+						break;
+					case '-6':
+						$message = 'Excede cupo m&aacute;ximo mensual';
+						break;
+					case '-7':
+						$message = 'Excede límite diario por transacci&oacute;n';
+						break;
+					case '-8':
+						$message = 'Rubro no autorizado';
+						break;
+				}
+				$this->model_checkout_order->update($order_info['order_id'], $this->config->get('config_order_status_id'), $message, false);
 			}
 		}
-
-/*
-	if ($status == 'Y' || $status == 'y') {
-		$order_status_id = $this->config->get('moneybrace_processed_status_id');
-		if (!$order_info['order_status_id'] || $order_info['order_status_id'] != $order_status_id) {
-			$this->model_checkout_order->confirm($order_id, $order_status_id);
-		} else {
-			$this->model_checkout_order->update($order_id, $order_status_id);
-		}
-	}
-*/
 
 		$this->template = 'default/template/payment/webpay_occl_callback.tpl';
 
@@ -181,6 +200,10 @@ class ControllerPaymentWebpayOCCL extends Controller {
 		$this->data['tbk_tipo_cuotas'] = 'XX';
 		$this->data['tbk_mac'] = 0;
 
+		$this->load->model('catalog/information');
+		$information_info = $this->model_catalog_information->getInformation($this->config->get('webpay_occl_return_policy'));
+		$this->data['return_policy'] = sprintf('<p>Revise nuestra <a href=\'%s\' title=\'%s\'>%s</a>', $this->url->link('information/information', 'information_id=' . $this->config->get('webpay_occl_return_policy'), 'SSL'), $information_info['title'], $information_info['title']);
+
 		if (isset($this->request->post['TBK_ID_SESION']) && isset($this->request->post['TBK_ORDEN_COMPRA'])) {
 			$tbk_cache = fopen(DIR_CACHE . 'TBK' . $this->request->post['TBK_ID_SESION'] . '.txt', 'r');
 			$tbk_cache_string = fgets($tbk_cache);
@@ -222,6 +245,7 @@ class ControllerPaymentWebpayOCCL extends Controller {
 			$this->data['tbk_nombre_comercio'] = $this->config->get('config_name');
 			$this->data['tbk_url_comercio'] = $this->data['base'];
 			$this->data['tbk_nombre_comprador'] = $this->customer->getFirstName() . ' ' . $this->customer->getLastName();
+// Usar los datos de: "$this->model_checkout_order->getOrder($tbk_orden_compra[1])" e implementar medidas de seguridad...
 			$this->data['tbk_orden_compra'] = $tbk_orden_compra[1];
 			$this->data['tbk_tipo_transaccion'] = 'Venta';
 //			$this->data['tbk_tipo_transaccion'] = $tbk_tipo_transaccion[1];
@@ -263,8 +287,6 @@ class ControllerPaymentWebpayOCCL extends Controller {
 
 			$this->data['tbk_mac'] = $tbk_mac[1];
 		}
-
-//		$this->model_checkout_order->update($this->request->post['cartId'], $this->config->get('webpay_occl_order_status_id'), $message, false);
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/webpay_occl_success.tpl')) {
 			$this->template = $this->config->get('config_template') . '/template/payment/webpay_occl_success.tpl';
